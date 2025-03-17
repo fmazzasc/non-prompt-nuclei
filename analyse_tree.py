@@ -45,6 +45,7 @@ rdf = ROOT.ROOT.RDataFrame(chainData) \
 .Define("nITSclsIB", "int(0) + bool(fITSclsMap & 1) + bool(fITSclsMap & 2) + bool(fITSclsMap & 4)") \
 .Define("nITScls", "nITSclsIB + bool(fITSclsMap & 8) + bool(fITSclsMap & 16) + bool(fITSclsMap & 32) + bool(fITSclsMap & 64)") \
 .Filter(base_sels)
+
 rdfMC = ROOT.ROOT.RDataFrame(chainMC) \
 .Define("ptUncorr", "2 * std::abs(fPt)") \
 .Define("pt", "ptUncorr + 0.0343554 + 0.96161 * std::exp(-1.51286 * ptUncorr)") \
@@ -65,7 +66,6 @@ rdfMC = rdfMC.Filter("std::abs(fPDGcode) == 1000020030 && isPrimary")
 
 hPtNSigmaTPC = rdf.Histo2D(("hPtNSigmaTPC", ";#it{p}_{T} (GeV/#it{c});n#sigma_{TPC}", len(pt_bins) - 1, pt_bins, 100, -4, 4), "pt", "nsigmaTPC")
 hPtNSigmaTPCMC = rdfMC.Histo2D(("hPtNSigmaTPCMC", ";#it{p}_{T} (GeV/#it{c});n#sigma_{TPC}", len(pt_bins) - 1, pt_bins, 100, -5, 5), "pt", "nsigmaTPC")
-hPtDCAxy = rdf.Histo2D(("hPtDCAxy", ";#it{p}_{T} (GeV/#it{c});DCA_{xy} (cm)", len(pt_bins) - 1, pt_bins, 100, -0.04, 0.04), "pt", "fDCAxy")
 hPtDCAxyMC = rdfMC.Histo2D(("hPtDCAxyMC", ";#it{p}_{T} (GeV/#it{c});DCA_{xy} (cm)", len(pt_bins) - 1, pt_bins, 100, -0.04, 0.04), "pt", "fDCAxy")
 hPtDCAxyMCSecondaries = rdfMCSecondaries.Histo2D(("hPtDCAxyMCSecondaries", ";#it{p}_{T} (GeV/#it{c});DCA_{xy} (cm)", len(pt_bins) - 1, pt_bins, 100, -0.04, 0.04), "pt", "fDCAxy")
 hNSigmaTPCClSize = rdf.Histo2D(("hNSigmaTPCClSize", ";n#sigma_{TPC};ITS cluster size", 100, -3, 3, 30, 0, 15), "nsigmaTPC", "clSize")
@@ -107,19 +107,55 @@ for iPtBin in range(1, hPtNSigmaTPC.GetXaxis().GetNbins() + 1):
   hPurity.SetBinContent(iPtBin, purity)
   hPurity.SetBinError(iPtBin, purity_err)
 
+
+
+rdf_bkg = rdf.Filter("std::abs(nsigmaTPC) > 3")
+rdf = rdf.Filter("std::abs(nsigmaTPC) < 2")
+hPtDCAxy = rdf.Histo2D(("hPtDCAxy", ";#it{p}_{T} (GeV/#it{c});DCA_{xy} (cm)", len(pt_bins) - 1, pt_bins, 100, -0.04, 0.04), "pt", "fDCAxy")
+hPtDCAxyBkg = rdf_bkg.Histo2D(("hPtDCAxyBkg", ";#it{p}_{T} (GeV/#it{c});DCA_{xy} (cm)", len(pt_bins) - 1, pt_bins, 100, -0.04, 0.04), "pt", "fDCAxy")
+
 outFile.cd()
+hPtDCAxy.Write()
+hPtDCAxyBkg.Write()
 hPurity.Write()
 hPtNSigmaTPC.Write()
 hNSigmaTPCClSize.Write()
-hPtDCAxy.Write()
 hPtNSigmaTPCMC.Write()
 hNSigmaTPCClSizeMC.Write()
 hPtDCAxyMC.Write()
 
-
-## template of primary He3
 dcaxy = ROOT.RooRealVar("dcaxy", "DCA_{xy}", 0., -0.04, 0.04, "cm")
 muDCAxy = ROOT.RooRealVar("muDCAxy", "#mu_{DCA_{xy}}", 0., -0.04, 0.04, "cm")
+
+## template of background from He3 sidebands
+sigmaDCAxyBkg = ROOT.RooRealVar("sigmaDCAxyBkg", "#sigma_{DCA_{xy}}", 1.e-3, 1.e-6, 1.e-2, "cm")
+alphaBkg = ROOT.RooRealVar("alphaBkg", "#alpha", 2, 0.1, 5)
+nBkg = ROOT.RooRealVar("nBkg", "n", 2, 0, 10)
+cbShapeBkg = ROOT.RooCrystalBall("cbShapeBkg", "cbShapeBkg", dcaxy, muDCAxy, sigmaDCAxyBkg, alphaBkg, nBkg, True)
+hSigmaCBBkg = ROOT.TH1F("hSigmaCBBkg", ";#it{p}_{T} (GeV/#it{c});#sigma_{CB} (cm)", len(pt_bins) - 1, pt_bins)
+hAlphaCBBkg = ROOT.TH1F("hAlphaCBBkg", ";#it{p}_{T} (GeV/#it{c});#alpha_{CB}", len(pt_bins) - 1, pt_bins)
+hNCBBkg = ROOT.TH1F("hNCBBkg", ";#it{p}_{T} (GeV/#it{c});n_{CB}", len(pt_bins) - 1, pt_bins)
+
+outFile.mkdir("dcaxy_fits_bkg")
+outFile.cd("dcaxy_fits_bkg")
+for iPtBin in range(1, hPtDCAxyBkg.GetXaxis().GetNbins() + 1):
+  hSlice = hPtDCAxyBkg.ProjectionY(f"slice_{iPtBin}", iPtBin, iPtBin)
+  roo_data_dcaxy = ROOT.RooDataHist(f"roo_data_bkg_dcaxy_{iPtBin}", f"roo_data_bkg_dcaxy_{iPtBin}", ROOT.RooArgList(dcaxy), hSlice)
+  cbShapeBkg.fitTo(roo_data_dcaxy)
+  plot = dcaxy.frame()
+  plot.SetName(f"frame_bkg_dcaxy_{iPtBin}")
+  roo_data_dcaxy.plotOn(plot, ROOT.RooFit.MarkerSize(0.5), ROOT.RooFit.Name("data"))
+  cbShapeBkg.plotOn(plot, ROOT.RooFit.Name("model"))
+  cbShapeBkg.paramOn(plot, ROOT.RooFit.Layout(0.6, 0.9, 0.9))
+  plot.Write()
+  hSigmaCBBkg.SetBinContent(iPtBin, sigmaDCAxyBkg.getVal())
+  hSigmaCBBkg.SetBinError(iPtBin, sigmaDCAxyBkg.getError())
+  hAlphaCBBkg.SetBinContent(iPtBin, alphaBkg.getVal())
+  hAlphaCBBkg.SetBinError(iPtBin, alphaBkg.getError())
+  hNCBBkg.SetBinContent(iPtBin, nBkg.getVal())
+  hNCBBkg.SetBinError(iPtBin, nBkg.getError())
+
+## template of primary He3 from MC
 sigmaDCAxy = ROOT.RooRealVar("sigmaDCAxy", "#sigma_{DCA_{xy}}", 1.e-3, 1.e-6, 1.e-2, "cm")
 alpha = ROOT.RooRealVar("alpha", "#alpha", 2, 0.1, 5)
 n = ROOT.RooRealVar("n", "n", 2, 0, 10)
@@ -128,7 +164,7 @@ hSigmaCB = ROOT.TH1F("hSigmaCB", ";#it{p}_{T} (GeV/#it{c});#sigma_{CB} (cm)", le
 hAlphaCB = ROOT.TH1F("hAlphaCB", ";#it{p}_{T} (GeV/#it{c});#alpha_{CB}", len(pt_bins) - 1, pt_bins)
 hNCB = ROOT.TH1F("hNCB", ";#it{p}_{T} (GeV/#it{c});n_{CB}", len(pt_bins) - 1, pt_bins)
 
-## template of secondaries He3 from H3L
+## template of secondaries He3 from H3L MC
 muDCAxyH3L = ROOT.RooRealVar("muDCAxyH3L", "#mu_{DCA_{xy}}", 0., -0.04, 0.04, "cm")
 sigmaDCAxyH3L = ROOT.RooRealVar("sigmaDCAxyH3L", "#sigma_{DCA_{xy}}", 1.e-3, 1.e-3, 1.e-2, "cm")
 alphaH3L = ROOT.RooRealVar("alphaH3L", "#alpha", 2, 0.5, 5)
@@ -184,7 +220,6 @@ hSigmaCBH3L.Write()
 hAlphaCBH3L.Write()
 hNCBH3L.Write()
 
-
 ## now we fit the data with the MC templates, convolved with a Gaussian
 outFile.cd()
 outFile.mkdir("dcaxy_fits_data")
@@ -201,32 +236,52 @@ for iPtBin in range(1, hPtDCAxy.GetXaxis().GetNbins() + 1):
   hSlice = hPtDCAxy.ProjectionY(f"slice_{iPtBin}", iPtBin, iPtBin)
   roo_data_dcaxy = ROOT.RooDataHist(f"roo_data_dcaxy_{iPtBin}", f"roo_data_dcaxy_{iPtBin}", ROOT.RooArgList(dcaxy), hSlice)
   
+  ## fix the MC primary template
   sigmaDCAxy.setVal(hSigmaCB.GetBinContent(iPtBin))
   sigmaDCAxy.setConstant(True)
   alpha.setVal(hAlphaCB.GetBinContent(iPtBin))
   alpha.setConstant(True)
   n.setVal(hNCB.GetBinContent(iPtBin))
   n.setConstant(True)
+  ## fix the MC secondary template
   sigmaDCAxyH3L.setVal(hSigmaCBH3L.GetBinContent(iPtBin))
   sigmaDCAxyH3L.setConstant(True)
   alphaH3L.setVal(hAlphaCBH3L.GetBinContent(iPtBin))
   alphaH3L.setConstant(True)
   nH3L.setVal(hNCBH3L.GetBinContent(iPtBin))
   nH3L.setConstant(True)
+  ## fix the background template
+  sigmaDCAxyBkg.setVal(hSigmaCBBkg.GetBinContent(iPtBin))
+  sigmaDCAxyBkg.setConstant(True)
+  alphaBkg.setVal(hAlphaCBBkg.GetBinContent(iPtBin))
+  alphaBkg.setConstant(True)
+  nBkg.setVal(hNCBBkg.GetBinContent(iPtBin))
+  nBkg.setConstant(True)
 
+  frac_sig = ROOT.RooRealVar("frac_sig", "frac_sig", 0.5, 0, 1)
+  ## fix sig fraction to the purity
+  frac_sig.setVal(hPurity.GetBinContent(iPtBin))
+  frac_sig.setConstant(True)
+  
+  fracPrim = ROOT.RooRealVar("fracPrim", "fracPrim", 0.5, 0, 1)
   convP = ROOT.RooFFTConvPdf(f"convP_{iPtBin}", f"convP_{iPtBin}", dcaxy, cbShape, gaus_reso)
   convS = ROOT.RooFFTConvPdf(f"convS_{iPtBin}", f"convS_{iPtBin}", dcaxy, cbShapeH3L, gaus_reso)
+  signal_pdf = ROOT.RooAddPdf(f"signal_pdf_{iPtBin}", "signal_pdf", ROOT.RooArgList(convP, convS), ROOT.RooArgList(fracPrim))
+  
+  full_pdf = ROOT.RooAddPdf(f"full_pdf_{iPtBin}", "full_pdf", ROOT.RooArgList(signal_pdf, cbShapeBkg), ROOT.RooArgList(frac_sig))
+  full_pdf.fitTo(roo_data_dcaxy)
 
-  fracPrim = ROOT.RooRealVar("fracPrim", "fracPrim", 0.5, 0, 1)
-  total_pdf = ROOT.RooAddPdf(f"total_pdf_{iPtBin}", "total_pdf", ROOT.RooArgList(convP, convS), ROOT.RooArgList(fracPrim))
-
-  total_pdf.fitTo(roo_data_dcaxy)
   plot = dcaxy.frame()
   plot.SetName(f"frame_dcaxy_data_{iPtBin}")
   roo_data_dcaxy.plotOn(plot, ROOT.RooFit.MarkerSize(0.5), ROOT.RooFit.Name("data"))
-  total_pdf.plotOn(plot, ROOT.RooFit.Name("model"))
-  total_pdf.paramOn(plot, ROOT.RooFit.Layout(0.6, 0.9, 0.9))
+  full_pdf.plotOn(plot, ROOT.RooFit.Name("model"))
+  ## plot the components
+  full_pdf.plotOn(plot, ROOT.RooFit.Components(f"convP_{iPtBin}"), ROOT.RooFit.LineStyle(ROOT.kDashed), ROOT.RooFit.LineColor(ROOT.kRed), ROOT.RooFit.Name("prim"))
+  full_pdf.plotOn(plot, ROOT.RooFit.Components(f"convS_{iPtBin}"), ROOT.RooFit.LineStyle(ROOT.kDashed), ROOT.RooFit.LineColor(ROOT.kGreen), ROOT.RooFit.Name("sec"))
+  full_pdf.plotOn(plot, ROOT.RooFit.Components(f"cbShapeBkg"), ROOT.RooFit.LineStyle(ROOT.kDashed), ROOT.RooFit.LineColor(ROOT.kBlue), ROOT.RooFit.Name("bkg"))
+  full_pdf.paramOn(plot, ROOT.RooFit.Layout(0.6, 0.9, 0.9))
   plot.Write()
+
 
   hGausSigma.SetBinContent(iPtBin, gaus_sigma.getVal())
   hGausSigma.SetBinError(iPtBin, gaus_sigma.getError())
