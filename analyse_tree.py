@@ -14,7 +14,7 @@ pt_bins = np.array(np.arange(1.5, 5, 0.4) , dtype=float)
 base_sels = "fTPCnCls >= 110 && std::abs(fEta) < 0.9 && std::abs(fDCAxy) < 0.7 && pt > 1 && pt < 9.0 && clSize > 5 && matter==0"
 
 
-file_data_list = ['/data3/fmazzasc/he3/2024_data/al/AO2D.root', '/data3/fmazzasc/he3/2024_data/an/AO2D.root']
+file_data_list = ['data/AO2D_al.root', 'data/AO2D_al.root']
 chainData = TChain("O2nucleitable")
 for fileName in file_data_list:
   fileData = TFile(fileName)
@@ -23,7 +23,7 @@ for fileName in file_data_list:
     if 'DF_' in keyName :
         chainData.Add(f'{fileName}/{keyName}/O2nucleitable')
 
-mc_data_list = ['/data3/fmazzasc/he3/mc/25a3/AO2D.root']
+mc_data_list = ['mc/AO2D_25a3.root']
 chainMC = TChain("O2nucleitablemc")
 for fileName in mc_data_list:
     fileData = TFile(fileName)
