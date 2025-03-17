@@ -11,7 +11,7 @@ ROOT.gROOT.LoadMacro('inc/Common.h+')
 from ROOT import nsigmaHe3
 
 pt_bins = np.array(np.arange(1.5, 5, 0.4) , dtype=float)
-base_sels = "fTPCnCls >= 110 && std::abs(fEta) < 0.9 && std::abs(fDCAxy) < 0.7 && pt > 1 && pt < 9.0 && clSize > 5 && matter==0"
+base_sels = "fTPCnCls >= 110 && std::abs(fEta) < 0.9 && std::abs(fDCAxy) < 0.7 && pt > 1 && pt < 9.0 && clSize > 5 && matter==0 && nITScls==7"
 
 
 file_data_list = ['data/AO2D_al.root', 'data/AO2D_al.root']
