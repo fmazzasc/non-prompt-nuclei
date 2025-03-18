@@ -11,6 +11,7 @@ from ROOT import nsigmaDeu
 
 pt_bins = np.array(np.arange(0.6, 3.2, 0.4) , dtype=float)
 base_sels = "fTPCnCls >= 110 && std::abs(fEta) < 0.9 && std::abs(fDCAxy) < 0.7 && pt > 0.6 && pt < 9.0 && matter==0 && nITScls==7 && std::abs(nsigmaTPC) < 2"
+base_sels_mc = "fTPCnCls >= 110 && std::abs(fEta) < 0.9 && std::abs(fDCAxy) < 0.7 && pt > 0.6 && pt < 9.0 && matter==0 && nITScls==7"
 
 
 file_data_list = ['d_data/data/AO2D_minbias.root',]
@@ -55,7 +56,7 @@ rdfMC = ROOT.ROOT.RDataFrame(chainMC) \
 .Define("nITSclsIB", "int(0) + bool(fITSclsMap & 1) + bool(fITSclsMap & 2) + bool(fITSclsMap & 4)") \
 .Define("nITScls", "nITSclsIB + bool(fITSclsMap & 8) + bool(fITSclsMap & 16) + bool(fITSclsMap & 32) + bool(fITSclsMap & 64)") \
 .Define("isPrimary", "fFlags & (1 << 9)") \
-.Filter(base_sels)
+.Filter(base_sels_mc)
 
 rdfMCSecondaries = rdfMC.Filter("std::abs(fPDGcode) == 1000010020 && !isPrimary")
 rdfMC = rdfMC.Filter("std::abs(fPDGcode) == 1000010020 && isPrimary")
