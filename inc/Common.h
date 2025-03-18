@@ -88,6 +88,9 @@ float nsigmaHe3(float mom, float sig) { return (sig / bbHe3(mom * 2) - 1. + 2.20
 float bbH3(float mom) { return bb(mom / 2.80892f, -136.71, 0.441, 0.2269, 1.347, 0.8035); }
 float nsigmaH3(float mom, float sig) { return (sig / bbH3(mom) - 1.) / 0.07; }
 
+float bbDeut(float mom) { return bb(mom / 1.8756129f, 11.56475, 3.86889, 0.0138162, 2.29009, 0.912842); }
+float nsigmaDeu(float mom, float sig) { return (sig / bbDeut(mom) - 1.) / 0.07; }
+
 float bbHe4(float mom) { return bb(mom / 3.72738f, -321.34, 0.6539, 1.591, 0.8225, 2.363); }
 float nsigmaHe4(float mom, float sig) { return (sig / bbHe4(mom * 2) - 1.) / 0.07; }
 
