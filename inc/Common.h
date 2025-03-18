@@ -18,61 +18,6 @@ using std::map;
 using std::string;
 using std::vector;
 
-const char   kLetter[2] = {'M','A'}; // M -> Matter, A -> Anti-matter
-const string kNames[2] = {"he3","antihe3"};
-const string kLabels[2] = {"^{3}He","^{3}#bar{He}"};
-
-// const string kMCproduction = "LHC24b2";
-const string kMCproduction = "LHC23j6b";
-const string kRecoPass = "apass4";
-const string kPeriod = "LHC22";
-const string kVariant = "giovanni";
-
-const string kBaseOutputDir = "$NUCLEI_OUTPUT/" + kPeriod + "/" + kRecoPass + "/";
-const string kBaseInputDir = "$NUCLEI_INPUT/";
-
-const string kDataTreeFilename = kBaseInputDir + "data/" + kPeriod + "/" + kRecoPass + "/MergedAO2D.root";
-const string kDataFilename = kBaseInputDir + "data/" + kPeriod + "/" + kRecoPass + "/DataHistos" + kVariant + ".root";
-const string kDataFilenameHe4 = kBaseInputDir + "data/" + kPeriod + "/" + kRecoPass + "/DataHistosHe4" + kVariant + ".root";
-const string kDataAnalysisResults = kBaseInputDir + "data/" + kPeriod + "/" + kRecoPass + "/AnalysisResults.root";
-const string kMCAnalysisResults = kBaseInputDir + "MC/" + kMCproduction + "/AnalysisResults.root";
-const string kMCtreeFilename = kBaseInputDir + "MC/" + kMCproduction + "/MergedAO2D.root";
-const string kMCfilename = kBaseInputDir + "MC/" + kMCproduction + "/MChistos"  + kVariant + ".root";
-const string kMCfilenameHe4 = kBaseInputDir + "MC/" + kMCproduction + "/MChistosHe4"  + kVariant + ".root";
-
-const string kFilterListNames = "nuclei";
-
-const string kBaseRecSelections = "fTPCnCls >= 110 && nITScls >= 5 && std::abs(fEta) < 0.9 && std::abs(fDCAxy) < 0.7 && pt > 0.8 && pt < 9.0";
-const string kDefaultRecSelections = "fTPCnCls > 120 && nITScls >= 6 && std::abs(nsigmaDCAz) < 7 && std::abs(fDCAxy) < 0.2";
-
-const string kSignalOutput = kBaseOutputDir + "signal" + kVariant + ".root";
-const string kSystematicsOutput = kBaseOutputDir + "systematics" + kVariant + ".root";
-
-// constexpr int    kNPtBins = 11;
-// constexpr double  kPtBins[kNPtBins+1] = {1.0, 1.2, 1.4, 1.8, 2.2, 2.6, 3.2,4.0,4.8,5.8,7,9};
-
-constexpr int    kNPtBins = 12;
-constexpr double  kPtBins[kNPtBins+1] = {1.5, 1.75, 2.0, 2.25, 2.5, 2.75, 3.0, 3.25, 3.5, 3.75, 4.0, 4.5, 5.0};
-
-const int    kCentLength = 1;
-const int    kCentBinsArray[kCentLength][2] = {{2,2}};
-const float  kCentPtLimits[kCentLength] = {7};
-const float  kCentLabels[kCentLength][2] = {{0.,100.}};
-
-const float  kTPCmaxPt = 7.0f;
-const float  kTOFminPt = 1.f;
-const float  kPtRange[2] = {1.4,7};
-
-const bool   kUseBarlow{true};
-const float  kAbsSyst[2] = {0.08,0.1f};
-
-constexpr int kNTPCfunctions = 3;
-const std::string kTPCfunctName[4]{"GausGaus", "ExpGaus", "ExpTailGaus", "LognormalLognormal"};
-
-
-std::map<string,vector<float> > kCutNames {{"nsigmaDCAz", {6, 7, 8}},{"fTPCnCls", {110, 120, 130}},{"nITScls", {5, 6, 7}}, {"nsigmaTPC", {3, 4, 5}}};
-size_t nTrials{kCutNames["fDCAz"].size() * kCutNames["fTPCnCls"].size() * kCutNames["nITScls"].size()};
-
 double bb(double bg, double kp1, double kp2, double kp3, double kp4, double kp5)
 {
   double beta = bg / std::sqrt(1. + bg * bg);
