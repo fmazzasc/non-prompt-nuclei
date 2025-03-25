@@ -19,6 +19,7 @@ pt_max = conf_prep["max_pt"]
 pt_min = conf_prep["min_pt"]
 bin_width = conf_prep["bin_width"]
 pt_bins = np.arange(pt_min, pt_max + bin_width, bin_width)
+max_abs_dca = conf_prep["max_abs_dca"]
 
 input_file = ROOT.TFile.Open(conf_prep["output_file"], "read")
 hPurity = input_file.Get("hPurity")
@@ -34,8 +35,8 @@ hPtDCAxyBkg.SetDirectory(0)
 
 outFile = ROOT.TFile.Open(conf_dca["output_file"], "recreate")
 
-dcaxy = ROOT.RooRealVar("dcaxy", "DCA_{xy}", 0., -0.04, 0.04, "cm")
-muDCAxy = ROOT.RooRealVar("muDCAxy", "#mu_{DCA_{xy}}", 0., -0.04, 0.04, "cm")
+dcaxy = ROOT.RooRealVar("dcaxy", "DCA_{xy}", 0., -max_abs_dca, max_abs_dca, "cm")
+muDCAxy = ROOT.RooRealVar("muDCAxy", "#mu_{DCA_{xy}}", 0., -max_abs_dca, max_abs_dca, "cm")
 
 ## template of background from He3 sidebands
 sigmaDCAxyBkg = ROOT.RooRealVar("sigmaDCAxyBkg", "#sigma_{DCA_{xy}}", 1.e-3, 1.e-4, 1.e-2, "cm")

@@ -6,8 +6,8 @@ data_preparation:
   bin_width: 0.25
   min_pt: 0.5
   max_pt: 3.0
-  n_bins_dcaxy: 200
-  max_abs_dcaxy: 0.04
+  n_bins_dca: 200
+  max_abs_dca: 0.04
 
 dca_analysis:
   output_file: "results/dca_analysis_deut_tree.root"

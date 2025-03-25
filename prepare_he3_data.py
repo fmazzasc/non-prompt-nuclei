@@ -26,6 +26,8 @@ bin_width = conf["bin_width"]
 pt_max = conf["max_pt"]
 pt_min = conf["min_pt"]
 pt_bins = np.arange(pt_min, pt_max + bin_width, bin_width)
+max_abs_dca = conf["max_abs_dca"]
+n_bins_dca = conf["n_bins_dca"]
 input_data = conf["input_data"]
 input_mc = conf["input_mc"]
 output_file = conf["output_file"]
@@ -85,8 +87,8 @@ rdfMC = rdfMC.Filter("std::abs(fPDGcode) == 1000020030 && isPrimary")
 
 hPtNSigmaTPC = rdf.Histo2D(("hPtNSigmaTPC", ";#it{p}_{T} (GeV/#it{c});n#sigma_{TPC}", len(pt_bins) - 1, pt_bins, 100, -4, 4), "pt", "nsigmaTPC")
 hPtNSigmaTPCMC = rdfMC.Histo2D(("hPtNSigmaTPCMC", ";#it{p}_{T} (GeV/#it{c});n#sigma_{TPC}", len(pt_bins) - 1, pt_bins, 100, -5, 5), "pt", "nsigmaTPC")
-hPtDCAxyMC = rdfMC.Histo2D(("hPtDCAxyMC", ";#it{p}_{T} (GeV/#it{c});DCA_{xy} (cm)", len(pt_bins) - 1, pt_bins, 100, -0.04, 0.04), "pt", "fDCAxy")
-hPtDCAxyMCSecondaries = rdfMCSecondaries.Histo2D(("hPtDCAxyMCSecondaries", ";#it{p}_{T} (GeV/#it{c});DCA_{xy} (cm)", len(pt_bins) - 1, pt_bins, 100, -0.04, 0.04), "pt", "fDCAxy")
+hPtDCAxyMC = rdfMC.Histo2D(("hPtDCAxyMC", ";#it{p}_{T} (GeV/#it{c});DCA_{xy} (cm)", len(pt_bins) - 1, pt_bins, n_bins_dca, -max_abs_dca, max_abs_dca), "pt", "fDCAxy")
+hPtDCAxyMCSecondaries = rdfMCSecondaries.Histo2D(("hPtDCAxyMCSecondaries", ";#it{p}_{T} (GeV/#it{c});DCA_{xy} (cm)", len(pt_bins) - 1, pt_bins, n_bins_dca, -max_abs_dca, max_abs_dca), "pt", "fDCAxy")
 hNSigmaTPCClSize = rdf.Histo2D(("hNSigmaTPCClSize", ";n#sigma_{TPC};ITS cluster size", 100, -3, 3, 30, 0, 15), "nsigmaTPC", "clSize")
 hNSigmaTPCClSizeMC = rdfMC.Histo2D(("hNSigmaTPCClSizeMC", ";n#sigma_{TPC};ITS cluster size", 100, -3, 3, 30, 0, 15), "nsigmaTPC", "clSize")
 
@@ -129,8 +131,8 @@ for iPtBin in range(1, hPtNSigmaTPC.GetXaxis().GetNbins() + 1):
 
 rdf_bkg = rdf.Filter("std::abs(nsigmaTPC) > 3")
 rdf = rdf.Filter("std::abs(nsigmaTPC) < 2")
-hPtDCAxy = rdf.Histo2D(("hPtDCAxy", ";#it{p}_{T} (GeV/#it{c});DCA_{xy} (cm)", len(pt_bins) - 1, pt_bins, 100, -0.04, 0.04), "pt", "fDCAxy")
-hPtDCAxyBkg = rdf_bkg.Histo2D(("hPtDCAxyBkg", ";#it{p}_{T} (GeV/#it{c});DCA_{xy} (cm)", len(pt_bins) - 1, pt_bins, 100, -0.04, 0.04), "pt", "fDCAxy")
+hPtDCAxy = rdf.Histo2D(("hPtDCAxy", ";#it{p}_{T} (GeV/#it{c});DCA_{xy} (cm)", len(pt_bins) - 1, pt_bins, n_bins_dca, -max_abs_dca, max_abs_dca), "pt", "fDCAxy")
+hPtDCAxyBkg = rdf_bkg.Histo2D(("hPtDCAxyBkg", ";#it{p}_{T} (GeV/#it{c});DCA_{xy} (cm)", len(pt_bins) - 1, pt_bins, n_bins_dca, -max_abs_dca, max_abs_dca), "pt", "fDCAxy")
 
 
 outFile.cd()
