@@ -1,0 +1,15 @@
+data_preparation:
+  analyse_tree: True
+  input_data: "d_data/data/AO2D_24_minbias.root"
+  input_mc: "d_data/mc/AO2D_25a3.root"
+  output_file: "results/prepare_data_deut_tree.root"
+  bin_width: 0.25
+  min_pt: 0.5
+  max_pt: 3.0
+  n_bins_dcaxy: 200
+  max_abs_dcaxy: 0.04
+
+dca_analysis:
+  output_file: "results/dca_analysis_deut_tree.root"
+  add_bkg_tpl: True
+  add_feed_down_tpl: True

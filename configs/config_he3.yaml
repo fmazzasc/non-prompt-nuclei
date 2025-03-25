@@ -1,0 +1,12 @@
+data_preparation:
+  input_data: ['he3_data/data/AO2D_24_an.root', 'he3_data/data/AO2D_24_al.root']
+  input_mc: ['he3_data/mc/AO2D_25a3.root']
+  output_file: "results/prepare_data_he3.root"
+  bin_width: 0.5
+  min_pt: 1.5
+  max_pt: 5.0
+  n_bins_dcaxy: 200
+  max_abs_dcaxy: 0.04
+
+dca_analysis:
+  output_file: "results/dca_analysis_he3.root"
