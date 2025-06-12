@@ -1,6 +1,7 @@
 data_preparation:
   input_data: ['he3_data/data/AO2D_24_skimmed.root']
   input_mc: ['he3_data/mc/AO2D_25a3.root']
+  input_mc_lambdab: ['he3_data/mc/AO2D_25e1_lambdab.root']
   output_file: "results/prepare_data_he3.root"
   bin_width: 0.5
   min_pt: 1.5
@@ -9,4 +10,6 @@ data_preparation:
   max_abs_dca: 0.04
 
 dca_analysis:
+  fit_lambdab: true
+  fix_h3l_fraction: true
   output_file: "results/dca_analysis_he3.root"
