@@ -25,6 +25,8 @@ with open(args.config_file, 'r') as stream:
 bin_width = conf["bin_width"]
 pt_max = conf["max_pt"]
 pt_min = conf["min_pt"]
+reweight_pt_mc = conf["reweight_pt_mc"]
+
 pt_bins = np.arange(pt_min, pt_max + bin_width, bin_width)
 max_abs_dca = conf["max_abs_dca"]
 n_bins_dca = conf["n_bins_dca"]
@@ -33,7 +35,8 @@ input_mc = conf["input_mc"]
 output_file = conf["output_file"]
 outFile = ROOT.TFile(output_file, "RECREATE")
 
-base_sels = "fTPCnCls >= 110 && std::abs(fEta) < 0.8 && std::abs(fDCAxy) < 0.7 && pt > 1 && pt < 9.0 && clSize > 5 && matter==0 && nITScls == 7"
+antimatter_sel = "matter==0"
+base_sels = "fTPCnCls >= 110 && std::abs(fEta) < 0.8 && std::abs(fDCAxy) < 0.7 && pt > 1 && pt < 9.0 && clSize > 5 && nITScls == 7"
 
 file_data_list = input_data if isinstance(input_data, list) else [input_data]
 chainData = TChain("O2nucleitable")
@@ -73,7 +76,7 @@ rdf = ROOT.ROOT.RDataFrame(chainData) \
 .Define("clSize", 'averageClusterSize(fITSclusterSizes)') \
 .Define("nITSclsIB", "int(0) + bool(fITSclsMap & 1) + bool(fITSclsMap & 2) + bool(fITSclsMap & 4)") \
 .Define("nITScls", "nITSclsIB + bool(fITSclsMap & 8) + bool(fITSclsMap & 16) + bool(fITSclsMap & 32) + bool(fITSclsMap & 64)") \
-.Filter(base_sels)
+.Filter(base_sels).Filter(antimatter_sel)
 
 rdfMC = ROOT.ROOT.RDataFrame(chainMC) \
 .Define("ptUncorr", "2 * std::abs(fPt)") \
@@ -103,18 +106,20 @@ rdfMCLambdab = ROOT.ROOT.RDataFrame(chainMCLambdab) \
 .Define("isPrimary", "fFlags & (1 << 9)") \
 .Filter(base_sels)
 
-rdfMCSecondaries = rdfMC.Filter("fPDGcode == -1000020030 && std::abs(fMotherPDGcode) == 1010010030") 
-rdfMC = rdfMC.Filter("fPDGcode == -1000020030 && isPrimary")
-############################################################################################################################################################################
+rdfMCSecondaries = rdfMC.Filter("std::abs(fPDGcode) == 1000020030 && std::abs(fMotherPDGcode) == 1010010030") 
+rdfMCLambdab = rdfMCLambdab.Filter("std::abs(fPDGcode) == 1000020030")
+rdfMC = rdfMC.Filter("std::abs(fPDGcode) == 1000020030 && isPrimary")
 
+############################################################################################################################################################################
 hPtNSigmaTPC = rdf.Histo2D(("hPtNSigmaTPC", ";#it{p}_{T} (GeV/#it{c});n#sigma_{TPC}", len(pt_bins) - 1, pt_bins, 100, -4, 4), "pt", "nsigmaTPC")
 hPtNSigmaTPCMC = rdfMC.Histo2D(("hPtNSigmaTPCMC", ";#it{p}_{T} (GeV/#it{c});n#sigma_{TPC}", len(pt_bins) - 1, pt_bins, 100, -5, 5), "pt", "nsigmaTPC")
 hPtNSigmaTPCMCLambdab = rdfMCLambdab.Histo2D(("hPtNSigmaTPCMCLambdab", ";#it{p}_{T} (GeV/#it{c});n#sigma_{TPC}", len(pt_bins) - 1, pt_bins, 100, -5, 5), "pt", "nsigmaTPC")
+hDCAxyDCaz = rdf.Histo2D(("hDCAxyDCaz", ";DCA_{xy} (cm);DCA_{z} (cm)", n_bins_dca, -max_abs_dca, max_abs_dca, n_bins_dca, -max_abs_dca, max_abs_dca), "fDCAxy", "fDCAz")
+hDCAxyDCazMC = rdfMC.Histo2D(("hDCAxyDCazMC", ";DCA_{xy} (cm);DCA_{z} (cm)", n_bins_dca, -max_abs_dca, max_abs_dca, n_bins_dca, -max_abs_dca, max_abs_dca), "fDCAxy", "fDCAz")
+
 hPtDCAxyMC = rdfMC.Histo2D(("hPtDCAxyMC", ";#it{p}_{T} (GeV/#it{c});DCA_{xy} (cm)", len(pt_bins) - 1, pt_bins, n_bins_dca, -max_abs_dca, max_abs_dca), "pt", "fDCAxy")
 hPtDCAxyMCSecondaries = rdfMCSecondaries.Histo2D(("hPtDCAxyMCSecondaries", ";#it{p}_{T} (GeV/#it{c});DCA_{xy} (cm)", len(pt_bins) - 1, pt_bins, n_bins_dca, -max_abs_dca, max_abs_dca), "pt", "fDCAxy")
 hPtDCAxyMCLambdab = rdfMCLambdab.Histo2D(("hPtDCAxyMCLambdab", ";#it{p}_{T} (GeV/#it{c});DCA_{xy} (cm)", len(pt_bins) - 1, pt_bins, n_bins_dca, -max_abs_dca, max_abs_dca), "pt", "fDCAxy")
-hDCAxyDCaz = rdf.Histo2D(("hDCAxyDCaz", ";DCA_{xy} (cm);DCA_{z} (cm)", n_bins_dca, -max_abs_dca, max_abs_dca, n_bins_dca, -max_abs_dca, max_abs_dca), "fDCAxy", "fDCAz")
-hDCAxyDCazMC = rdfMC.Histo2D(("hDCAxyDCazMC", ";DCA_{xy} (cm);DCA_{z} (cm)", n_bins_dca, -max_abs_dca, max_abs_dca, n_bins_dca, -max_abs_dca, max_abs_dca), "fDCAxy", "fDCAz")
 
 hNSigmaTPCClSize = rdf.Histo2D(("hNSigmaTPCClSize", ";n#sigma_{TPC};ITS cluster size", 100, -3, 3, 30, 0, 15), "nsigmaTPC", "clSize")
 hNSigmaTPCClSizeMC = rdfMC.Histo2D(("hNSigmaTPCClSizeMC", ";n#sigma_{TPC};ITS cluster size", 100, -3, 3, 30, 0, 15), "nsigmaTPC", "clSize")
@@ -160,8 +165,43 @@ rdf = rdf.Filter("std::abs(nsigmaTPC) < 2")
 hPtDCAxy = rdf.Histo2D(("hPtDCAxy", ";#it{p}_{T} (GeV/#it{c});DCA_{xy} (cm)", len(pt_bins) - 1, pt_bins, n_bins_dca, -max_abs_dca, max_abs_dca), "pt", "fDCAxy")
 hPtDCAxyBkg = rdf_bkg.Histo2D(("hPtDCAxyBkg", ";#it{p}_{T} (GeV/#it{c});DCA_{xy} (cm)", len(pt_bins) - 1, pt_bins, n_bins_dca, -max_abs_dca, max_abs_dca), "pt", "fDCAxy")
 
-outFile.cd()
+if reweight_pt_mc:
+  outFile.mkdir("pt_reweighting")
+  outFile.cd("pt_reweighting")
+  pt_bins_fine = np.arange(pt_min, pt_max + bin_width / 10, bin_width / 10)
+  hPtDCAxy_finebins = rdf.Histo2D(("hPtDCAxy_finebins", ";#it{p}_{T} (GeV/#it{c});DCA_{xy} (cm)", len(pt_bins_fine) - 1, pt_bins_fine, n_bins_dca, -max_abs_dca, max_abs_dca), "pt", "fDCAxy")
+  hPtDCAxyMC_finebins = rdfMC.Histo2D(("hPtDCAxyMC_finebins", ";#it{p}_{T} (GeV/#it{c});DCA_{xy} (cm)", len(pt_bins_fine) - 1, pt_bins_fine, n_bins_dca, -max_abs_dca, max_abs_dca), "pt", "fDCAxy")
+  hPtData_finebins = hPtDCAxy_finebins.ProjectionX("hPtData_finebins")
+  hPtMC_finebins = hPtDCAxyMC_finebins.ProjectionX("hPtMC_finebins")
 
+  hPtDCAxy_finebins.Write()
+  hPtDCAxyMC_finebins.Write()
+  hPtDCAxyMC.Write("hPtDCAxyMC_before_reweighting")
+
+  for iPtBin in range(1, hPtDCAxy.GetXaxis().GetNbins() + 1):
+
+    hPtDCAxy_finebins = rdf.Histo2D((f"hPtDCAxy_finebins_{iPtBin}", ";#it{p}_{T} (GeV/#it{c});DCA_{xy} (cm)", 10, pt_bins[iPtBin-1], pt_bins[iPtBin], n_bins_dca, -max_abs_dca, max_abs_dca), "pt", "fDCAxy")
+    hPtDCAxyMC_finebins = rdfMC.Histo2D((f"hPtDCAxyMC_finebins_{iPtBin}", ";#it{p}_{T} (GeV/#it{c});DCA_{xy} (cm)", 10, pt_bins[iPtBin-1], pt_bins[iPtBin], n_bins_dca, -max_abs_dca, max_abs_dca), "pt", "fDCAxy")
+    hPtWeights = hPtDCAxy_finebins.ProjectionX(f"hPtWeights_{iPtBin}")
+    hPtWeights.Scale(1. / hPtWeights.Integral())
+    hPtWeights.Write()
+
+    num_entries = hPtDCAxyMC.ProjectionY(f"num_entries_{iPtBin}", iPtBin, iPtBin).GetEntries()
+    for iPtBinFine in range(1, hPtDCAxyMC_finebins.GetXaxis().GetNbins() + 1):
+       weigth = hPtWeights.GetBinContent(iPtBinFine)
+       dca_histo = hPtDCAxyMC_finebins.ProjectionY(f"dca_sum_{iPtBin}_{iPtBinFine}", iPtBinFine, iPtBinFine)
+       dca_histo.Scale(1. / dca_histo.Integral())
+       dca_histo.Scale(weigth)
+       for iDCA in range(1, dca_histo.GetXaxis().GetNbins() + 1):
+           if iPtBinFine == 1:
+              hPtDCAxyMC.SetBinContent(iPtBin, iDCA, dca_histo.GetBinContent(iDCA))
+           else:
+              hPtDCAxyMC.SetBinContent(iPtBin, iDCA, hPtDCAxyMC.GetBinContent(iPtBin, iDCA) + dca_histo.GetBinContent(iDCA))
+    for iDCA in range(1, hPtDCAxyMC.GetYaxis().GetNbins() + 1):
+       hPtDCAxyMC.SetBinContent(iPtBin, iDCA, hPtDCAxyMC.GetBinContent(iPtBin, iDCA) * num_entries)    
+
+
+outFile.cd()
 hDCAxyDCaz.Write()
 hDCAxyDCazMC.Write()
 hPtDCAxy.Write()
@@ -178,10 +218,13 @@ hNSigmaTPCClSizeMCLambdab.Write()
 hPtDCAxyMCLambdab.Write()
 
 
-## compute he3 <-- h3l and he3 efficiencies
+## compute he3 <-- h3l and he3 efficiencies, select antimatter only
 rdfMCGen = ROOT.ROOT.RDataFrame(chainMC).Define("isPrimary", "fFlags & (1 << 9)")
 rdfMCGenPrim = rdfMCGen.Filter("fPDGcode == -1000020030 && isPrimary && fMotherPDGcode == 0")
+rdfMC = rdfMC.Filter("fPDGcode == -1000020030")
 rdfMCGenSec = rdfMCGen.Filter("fPDGcode == -1000020030 && abs(fMotherPDGcode) == 1010010030")
+rdfMCSecondaries = rdfMCSecondaries.Filter("fPDGcode == -1000020030")
+
 hPtMCGenPrim = rdfMCGenPrim.Histo1D(("hPtMCGenPrim", ";#it{p}_{T} (GeV/#it{c})", len(pt_bins) - 1, pt_bins), "fgPt")
 hPtMCGenPrim_Clone = hPtMCGenPrim.Clone("hPtMCGenPrim_Clone")
 hPtMCGenSec = rdfMCGenSec.Histo1D(("hPtMCGenSec", ";#it{p}_{T} (GeV/#it{c})", len(pt_bins) - 1, pt_bins), "fgPt")
@@ -193,7 +236,6 @@ hEffPrim = hPtMCRecPrim.Clone("hEffPrim")
 hEffPrim.Divide(hPtMCGenPrim_Clone)
 hEffSec = hPtMCRecSec.Clone("hEffSec")
 hEffSec.Divide(hPtMCGenSec_Clone)
-
 h3l_spectrum_file = ROOT.TFile("utils/h3l_spectrum.root")
 he3_spectrum_file = ROOT.TFile("utils/he3_spectrum.root")
 ## Get the total He3 spectrum and its systematic and statistical uncertainties
