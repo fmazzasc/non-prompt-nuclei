@@ -1,0 +1,184 @@
+Starting ROOT version 6.32.06.
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(cbShape_over_cbShape_Int[dcaxy]) fixing normalization set for coefficient determination to observables in data
+[#1] INFO:Fitting -- using CPU computation library compiled with -mavx512
+[#1] INFO:Fitting -- RooAddition::defaultErrorLevel(nll_cbShape_over_cbShape_Int[dcaxy]_roo_mc_dcaxy_1) Summation contains a RooNLLVar, using its error level
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: activating const optimization
+Minuit2Minimizer: Minimize with max-calls 2000 convergence for edm < 1 strategy 1
+Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = -147713.207177511445
+Edm   = 0.000161413894136988795
+Nfcn  = 427
+alpha	  = 1.60406	 +/-  0.0362439	(limited)
+muDCAxy	  = -4.27408e-05	 +/-  2.48819e-05	(limited)
+n	  = 8.476	 +/-  0.90853	(limited)
+sigmaDCAxy	  = 0.00438864	 +/-  3.08923e-05	(limited)
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: deactivating const optimization
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(gausShape) fixing normalization set for coefficient determination to observables in data
+[#1] INFO:Fitting -- RooAddition::defaultErrorLevel(nll_gausShape_roo_mc_dcaxy_1) Summation contains a RooNLLVar, using its error level
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: activating const optimization
+Minuit2Minimizer: Minimize with max-calls 2000 convergence for edm < 1 strategy 1
+Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = -147670.223349086882
+Edm   = 0.000331616781830530022
+Nfcn  = 169
+fracGaus	  = 0.126352	 +/-  0.00832235	(limited)
+muDCAxy	  = -4.13246e-05	 +/-  2.49549e-05	(limited)
+sigmaDCAxy1	  = 0.0100529	 +/-  0.000213792	(limited)
+sigmaDCAxy2	  = 0.00429609	 +/-  3.45727e-05	(limited)
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: deactivating const optimization
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(cbShape_over_cbShape_Int[dcaxy]) fixing normalization set for coefficient determination to observables in data
+[#1] INFO:Fitting -- RooAddition::defaultErrorLevel(nll_cbShape_over_cbShape_Int[dcaxy]_roo_mc_dcaxy_2) Summation contains a RooNLLVar, using its error level
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: activating const optimization
+Minuit2Minimizer: Minimize with max-calls 2000 convergence for edm < 1 strategy 1
+Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = -284353.503881076176
+Edm   = 1.86342225336758414e-05
+Nfcn  = 162
+alpha	  = 1.83825	 +/-  0.0217405	(limited)
+muDCAxy	  = -2.31596e-05	 +/-  1.23224e-05	(limited)
+n	  = 5.85218	 +/-  0.287518	(limited)
+sigmaDCAxy	  = 0.00296885	 +/-  1.20407e-05	(limited)
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: deactivating const optimization
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(gausShape) fixing normalization set for coefficient determination to observables in data
+[#1] INFO:Fitting -- RooAddition::defaultErrorLevel(nll_gausShape_roo_mc_dcaxy_2) Summation contains a RooNLLVar, using its error level
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: activating const optimization
+Minuit2Minimizer: Minimize with max-calls 2000 convergence for edm < 1 strategy 1
+Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = -284212.427539207216
+Edm   = 1.02432024889630868e-05
+Nfcn  = 212
+fracGaus	  = 0.94663	 +/-  0.00320353	(limited)
+muDCAxy	  = -2.4072e-05	 +/-  1.24972e-05	(limited)
+sigmaDCAxy1	  = 0.00300586	 +/-  1.38768e-05	(limited)
+sigmaDCAxy2	  = 0.00863623	 +/-  0.000189197	(limited)
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: deactivating const optimization
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(cbShape_over_cbShape_Int[dcaxy]) fixing normalization set for coefficient determination to observables in data
+[#1] INFO:Fitting -- RooAddition::defaultErrorLevel(nll_cbShape_over_cbShape_Int[dcaxy]_roo_mc_dcaxy_3) Summation contains a RooNLLVar, using its error level
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: activating const optimization
+Minuit2Minimizer: Minimize with max-calls 2000 convergence for edm < 1 strategy 1
+Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = -298266.075200488674
+Edm   = 7.21306548911360059e-05
+Nfcn  = 136
+alpha	  = 2.13022	 +/-  0.0325932	(limited)
+muDCAxy	  = -1.71185e-05	 +/-  9.34055e-06	(limited)
+n	  = 3.56367	 +/-  0.169637	(limited)
+sigmaDCAxy	  = 0.00226462	 +/-  9.68604e-06	(limited)
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: deactivating const optimization
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(gausShape) fixing normalization set for coefficient determination to observables in data
+[#1] INFO:Fitting -- RooAddition::defaultErrorLevel(nll_gausShape_roo_mc_dcaxy_3) Summation contains a RooNLLVar, using its error level
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: activating const optimization
+Minuit2Minimizer: Minimize with max-calls 2000 convergence for edm < 1 strategy 1
+Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = -298070.672477705579
+Edm   = 3.5573676854854506e-05
+Nfcn  = 102
+fracGaus	  = 0.977334	 +/-  0.00128993	(limited)
+muDCAxy	  = -1.69205e-05	 +/-  9.41908e-06	(limited)
+sigmaDCAxy1	  = 0.00231874	 +/-  8.25834e-06	(limited)
+sigmaDCAxy2	  = 0.0101566	 +/-  0.00027598	(limited)
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: deactivating const optimization
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(cbShape_over_cbShape_Int[dcaxy]) fixing normalization set for coefficient determination to observables in data
+[#1] INFO:Fitting -- RooAddition::defaultErrorLevel(nll_cbShape_over_cbShape_Int[dcaxy]_roo_mc_dcaxy_4) Summation contains a RooNLLVar, using its error level
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: activating const optimization
+Minuit2Minimizer: Minimize with max-calls 2000 convergence for edm < 1 strategy 1
+Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = -330017.170992515632
+Edm   = 5.63371489740090841e-06
+Nfcn  = 109
+alpha	  = 2.12119	 +/-  0.0216338	(limited)
+muDCAxy	  = -2.6585e-05	 +/-  7.38141e-06	(limited)
+n	  = 3.2501	 +/-  0.107601	(limited)
+sigmaDCAxy	  = 0.00184787	 +/-  6.58544e-06	(limited)
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: deactivating const optimization
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(gausShape) fixing normalization set for coefficient determination to observables in data
+[#1] INFO:Fitting -- RooAddition::defaultErrorLevel(nll_gausShape_roo_mc_dcaxy_4) Summation contains a RooNLLVar, using its error level
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: activating const optimization
+Minuit2Minimizer: Minimize with max-calls 2000 convergence for edm < 1 strategy 1
+Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = -329746.651211359364
+Edm   = 1.07646164774985227e-05
+Nfcn  = 95
+fracGaus	  = 0.976193	 +/-  0.00114629	(limited)
+muDCAxy	  = -2.5873e-05	 +/-  7.49692e-06	(limited)
+sigmaDCAxy1	  = 0.00189927	 +/-  6.46672e-06	(limited)
+sigmaDCAxy2	  = 0.00928513	 +/-  0.000225421	(limited)
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: deactivating const optimization
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(cbShape_over_cbShape_Int[dcaxy]) fixing normalization set for coefficient determination to observables in data
+[#1] INFO:Fitting -- RooAddition::defaultErrorLevel(nll_cbShape_over_cbShape_Int[dcaxy]_roo_mc_dcaxy_5) Summation contains a RooNLLVar, using its error level
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: activating const optimization
+Minuit2Minimizer: Minimize with max-calls 2000 convergence for edm < 1 strategy 1
+Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = -352340.085892807052
+Edm   = 0.000104096320362647625
+Nfcn  = 109
+alpha	  = 2.20999	 +/-  0.0183438	(limited)
+muDCAxy	  = -6.86008e-06	 +/-  6.0863e-06	(limited)
+n	  = 2.75136	 +/-  0.0762944	(limited)
+sigmaDCAxy	  = 0.00156203	 +/-  5.0126e-06	(limited)
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: deactivating const optimization
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(gausShape) fixing normalization set for coefficient determination to observables in data
+[#1] INFO:Fitting -- RooAddition::defaultErrorLevel(nll_gausShape_roo_mc_dcaxy_5) Summation contains a RooNLLVar, using its error level
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: activating const optimization
+Minuit2Minimizer: Minimize with max-calls 2000 convergence for edm < 1 strategy 1
+Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = -352046.031060106528
+Edm   = 1.30464546728156041e-05
+Nfcn  = 90
+fracGaus	  = 0.978505	 +/-  0.000946708	(limited)
+muDCAxy	  = -6.86962e-06	 +/-  6.21264e-06	(limited)
+sigmaDCAxy1	  = 0.00160426	 +/-  5.17277e-06	(limited)
+sigmaDCAxy2	  = 0.00923999	 +/-  0.000219436	(limited)
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: deactivating const optimization
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(cbShape_over_cbShape_Int[dcaxy]) fixing normalization set for coefficient determination to observables in data
+[#1] INFO:Fitting -- RooAddition::defaultErrorLevel(nll_cbShape_over_cbShape_Int[dcaxy]_roo_mc_dcaxy_6) Summation contains a RooNLLVar, using its error level
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: activating const optimization
+Minuit2Minimizer: Minimize with max-calls 2000 convergence for edm < 1 strategy 1
+Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = -374994.78750479297
+Edm   = 7.46155851240994204e-07
+Nfcn  = 152
+alpha	  = 2.0837	 +/-  0.0203243	(limited)
+muDCAxy	  = -1.1764e-05	 +/-  5.21692e-06	(limited)
+n	  = 2.88472	 +/-  0.0770608	(limited)
+sigmaDCAxy	  = 0.00133538	 +/-  4.9737e-06	(limited)
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: deactivating const optimization
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(gausShape) fixing normalization set for coefficient determination to observables in data
+[#1] INFO:Fitting -- RooAddition::defaultErrorLevel(nll_gausShape_roo_mc_dcaxy_6) Summation contains a RooNLLVar, using its error level
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: activating const optimization
+Minuit2Minimizer: Minimize with max-calls 2000 convergence for edm < 1 strategy 1
+Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = -374629.089237711276
+Edm   = 3.81250484877385749e-06
+Nfcn  = 86
+fracGaus	  = 0.977465	 +/-  0.000872701	(limited)
+muDCAxy	  = -1.23368e-05	 +/-  5.31777e-06	(limited)
+sigmaDCAxy1	  = 0.00139793	 +/-  4.35502e-06	(limited)
+sigmaDCAxy2	  = 0.00912477	 +/-  0.000199457	(limited)
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: deactivating const optimization
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(cbShape_over_cbShape_Int[dcaxy]) fixing normalization set for coefficient determination to observables in data
+[#1] INFO:Fitting -- RooAddition::defaultErrorLevel(nll_cbShape_over_cbShape_Int[dcaxy]_roo_mc_dcaxy_7) Summation contains a RooNLLVar, using its error level
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: activating const optimization
+Minuit2Minimizer: Minimize with max-calls 2000 convergence for edm < 1 strategy 1
+Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = -394039.6862814427
+Edm   = 1.11388850915495368e-05
+Nfcn  = 118
+alpha	  = 2.10008	 +/-  0.0261104	(limited)
+muDCAxy	  = -7.7332e-07	 +/-  4.51045e-06	(limited)
+n	  = 2.74388	 +/-  0.0825669	(limited)
+sigmaDCAxy	  = 0.00116152	 +/-  5.06382e-06	(limited)
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: deactivating const optimization
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(gausShape) fixing normalization set for coefficient determination to observables in data
+[#1] INFO:Fitting -- RooAddition::defaultErrorLevel(nll_gausShape_roo_mc_dcaxy_7) Summation contains a RooNLLVar, using its error level
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: activating const optimization
+Minuit2Minimizer: Minimize with max-calls 2000 convergence for edm < 1 strategy 1
+Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = -393603.296620644163
+Edm   = 1.89780640728792483e-06
+Nfcn  = 89
+fracGaus	  = 0.976759	 +/-  0.00084235	(limited)
+muDCAxy	  = -6.78413e-07	 +/-  4.56873e-06	(limited)
+sigmaDCAxy1	  = 0.00121405	 +/-  3.74499e-06	(limited)
+sigmaDCAxy2	  = 0.00853347	 +/-  0.000177997	(limited)
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: deactivating const optimization

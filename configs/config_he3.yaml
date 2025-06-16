@@ -6,7 +6,7 @@ data_preparation:
   bin_width: 0.5
   min_pt: 1.5
   max_pt: 5.0
-  reweight_pt_mc: true
+  reweight_pt_mc: false
   n_bins_dca: 200
   max_abs_dca: 0.04
 

@@ -97,7 +97,7 @@ if conf_dca["fit_lambdab"]:
   muDCAxyLambdab = ROOT.RooRealVar("muDCAxyLambdab", "#mu_{DCA_{xy}}", 0., -0.02, 0.02, "cm")
   sigmaDCAxyLambdab = ROOT.RooRealVar("sigmaDCAxyLambdab", "#sigma_{DCA_{xy}}", 1.e-3, 1.e-3, 1.e-2, "cm")
   alphaLambdab = ROOT.RooRealVar("alphaLambdab", "#alpha", 2, 0.5, 7)
-  nLambdab = ROOT.RooRealVar("nLambdab", "n", 2, 1, 20)
+  nLambdab = ROOT.RooRealVar("nLambdab", "n", 2, 0.3, 20)
   cbShapeLambdab = ROOT.RooCrystalBall("cbShapeLambdab", "cbShapeLambdab", dcaxy, muDCAxyLambdab, sigmaDCAxyLambdab, alphaLambdab, nLambdab, True)
   hSigmaCBLambdab = ROOT.TH1F("hSigmaCBLambdab", ";#it{p}_{T} (GeV/#it{c});#sigma_{CB} (cm)", len(pt_bins) - 1, pt_bins)
   hAlphaCBLambdab = ROOT.TH1F("hAlphaCBLambdab", ";#it{p}_{T} (GeV/#it{c});#alpha_{CB}", len(pt_bins) - 1, pt_bins)
@@ -184,7 +184,9 @@ gaus_reso = ROOT.RooGaussian("gaus_reso", "gaus_reso", dcaxy, muDCAxy, gaus_sigm
 
 hGausSigma = ROOT.TH1F("hGausSigma", ";#it{p}_{T} (GeV/#it{c});#sigma_{Gaus} (cm)", len(pt_bins) - 1, pt_bins)
 hPrimaryFrac = ROOT.TH1F("hPrimaryFrac", ";#it{p}_{T} (GeV/#it{c});Primary fraction", len(pt_bins) - 1, pt_bins)
-hSecondaryFrac = ROOT.TH1F("hSecondaryFrac", ";#it{p}_{T} (GeV/#it{c});Secondary fraction", len(pt_bins) - 1, pt_bins)
+hH3LFrac = ROOT.TH1F("hH3LFrac", ";#it{p}_{T} (GeV/#it{c});Secondary fraction", len(pt_bins) - 1, pt_bins)
+if conf_dca["fit_lambdab"]:
+  hLambdaBFrac = ROOT.TH1F("hLambdaBFrac", ";#it{p}_{T} (GeV/#it{c});Lambdab fraction", len(pt_bins) - 1, pt_bins)
 
 for iPtBin in range(1, hPtDCAxy.GetXaxis().GetNbins() + 1):
   hSlice = hPtDCAxy.ProjectionY(f"slice_{iPtBin}", iPtBin, iPtBin)
@@ -204,6 +206,14 @@ for iPtBin in range(1, hPtDCAxy.GetXaxis().GetNbins() + 1):
   alphaH3L.setRange(hAlphaCBH3L.GetBinContent(iPtBin) - 1 * hAlphaCBH3L.GetBinError(iPtBin), hAlphaCBH3L.GetBinContent(iPtBin) + 1 * hAlphaCBH3L.GetBinError(iPtBin))
   nH3L.setVal(hNCBH3L.GetBinContent(iPtBin))
   nH3L.setRange(hNCBH3L.GetBinContent(iPtBin) - 1 * hNCBH3L.GetBinError(iPtBin), hNCBH3L.GetBinContent(iPtBin) + 1 * hNCBH3L.GetBinError(iPtBin))
+  if conf_dca["fit_lambdab"]:
+    ## fix the MC lambdab template
+    sigmaDCAxyLambdab.setVal(hSigmaCBLambdab.GetBinContent(iPtBin))
+    sigmaDCAxyLambdab.setRange(hSigmaCBLambdab.GetBinContent(iPtBin) - 1 * hSigmaCBLambdab.GetBinError(iPtBin), hSigmaCBLambdab.GetBinContent(iPtBin) + 1 * hSigmaCBLambdab.GetBinError(iPtBin))
+    alphaLambdab.setVal(hAlphaCBLambdab.GetBinContent(iPtBin))
+    alphaLambdab.setRange(hAlphaCBLambdab.GetBinContent(iPtBin) - 1 * hAlphaCBLambdab.GetBinError(iPtBin), hAlphaCBLambdab.GetBinContent(iPtBin) + 1 * hAlphaCBLambdab.GetBinError(iPtBin))
+    nLambdab.setVal(hNCBLambdab.GetBinContent(iPtBin))
+    nLambdab.setRange(hNCBLambdab.GetBinContent(iPtBin) - 1 * hNCBLambdab.GetBinError(iPtBin), hNCBLambdab.GetBinContent(iPtBin) + 1 * hNCBLambdab.GetBinError(iPtBin))
   ## fix the background template
   sigmaDCAxyBkg.setVal(hSigmaCBBkg.GetBinContent(iPtBin))
   sigmaDCAxyBkg.setRange(hSigmaCBBkg.GetBinContent(iPtBin) - 1 * hSigmaCBBkg.GetBinError(iPtBin), hSigmaCBBkg.GetBinContent(iPtBin) + 1 * hSigmaCBBkg.GetBinError(iPtBin))
@@ -217,18 +227,22 @@ for iPtBin in range(1, hPtDCAxy.GetXaxis().GetNbins() + 1):
   frac_sig.setVal(hPurity.GetBinContent(iPtBin))
   frac_sig.setConstant(True)
   
-  fracPrim = ROOT.RooRealVar("fracPrim", "fracPrim", 0.8, 0, 1)
+  frac_h3l = ROOT.RooRealVar("frac_h3l", "frac_h3l", 0.8, 0, 1)
   if hH3LFraction is not None:
-    fracPrim.setRange(1 - hH3LFraction.GetBinContent(iPtBin) - 1 * hH3LFraction.GetBinError(iPtBin), 1 - hH3LFraction.GetBinContent(iPtBin) + 1 * hH3LFraction.GetBinError(iPtBin))
-    print("Frac range: ", fracPrim.getMin(), fracPrim.getMax())
+    frac_h3l.setRange(hH3LFraction.GetBinContent(iPtBin) - 1 * hH3LFraction.GetBinError(iPtBin), hH3LFraction.GetBinContent(iPtBin) + 1 * hH3LFraction.GetBinError(iPtBin))
 
   convP = ROOT.RooFFTConvPdf(f"convP_{iPtBin}", f"convP_{iPtBin}", dcaxy, cbShape, gaus_reso)
   convS = ROOT.RooFFTConvPdf(f"convS_{iPtBin}", f"convS_{iPtBin}", dcaxy, cbShapeH3L, gaus_reso)
-  signal_pdf = ROOT.RooAddPdf(f"signal_pdf_{iPtBin}", "signal_pdf", ROOT.RooArgList(convP, convS), ROOT.RooArgList(fracPrim))
-  
+
+  if conf_dca["fit_lambdab"]:
+    frac_lambdab = ROOT.RooRealVar("frac_lambdab", "frac_lambdab", 0.1, 0, 1)
+    convLambdab = ROOT.RooFFTConvPdf(f"convLambdab_{iPtBin}", f"convLambdab_{iPtBin}", dcaxy, cbShapeLambdab, gaus_reso)
+    signal_pdf = ROOT.RooAddPdf(f"signal_pdf_{iPtBin}", "signal_pdf", ROOT.RooArgList(convS, convLambdab, convP), ROOT.RooArgList(frac_h3l, frac_lambdab))
+  else:
+    signal_pdf = ROOT.RooAddPdf(f"signal_pdf_{iPtBin}", "signal_pdf", ROOT.RooArgList(convS, convP), ROOT.RooArgList(frac_h3l))
+
   full_pdf = ROOT.RooAddPdf(f"full_pdf_{iPtBin}", "full_pdf", ROOT.RooArgList(signal_pdf, cbShapeBkg), ROOT.RooArgList(frac_sig))
   full_pdf.fitTo(roo_data_dcaxy)
-
   plot = dcaxy.frame()
   plot.SetName(f"frame_dcaxy_data_{iPtBin}")
   roo_data_dcaxy.plotOn(plot, ROOT.RooFit.MarkerSize(0.5), ROOT.RooFit.Name("data"))
@@ -243,13 +257,18 @@ for iPtBin in range(1, hPtDCAxy.GetXaxis().GetNbins() + 1):
 
   hGausSigma.SetBinContent(iPtBin, gaus_sigma.getVal())
   hGausSigma.SetBinError(iPtBin, gaus_sigma.getError())
-  hPrimaryFrac.SetBinContent(iPtBin, fracPrim.getVal())
-  hPrimaryFrac.SetBinError(iPtBin, fracPrim.getError())
-  hSecondaryFrac.SetBinContent(iPtBin, 1 - fracPrim.getVal())
-  hSecondaryFrac.SetBinError(iPtBin, fracPrim.getError())
+  hPrimaryFrac.SetBinContent(iPtBin, 1 - frac_h3l.getVal())
+  hPrimaryFrac.SetBinError(iPtBin, frac_h3l.getError())
+  hH3LFrac.SetBinContent(iPtBin, frac_h3l.getVal())
+  hH3LFrac.SetBinError(iPtBin, frac_h3l.getError())
+  if conf_dca["fit_lambdab"]:
+    hLambdaBFrac.SetBinContent(iPtBin, frac_lambdab.getVal())
+    hLambdaBFrac.SetBinError(iPtBin, frac_lambdab.getError())
 
 
 outFile.cd()
 hGausSigma.Write()
 hPrimaryFrac.Write()
-hSecondaryFrac.Write()
+hH3LFrac.Write()
+if conf_dca["fit_lambdab"]:
+  hLambdaBFrac.Write()

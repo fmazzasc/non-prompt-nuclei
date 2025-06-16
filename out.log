@@ -1,0 +1,873 @@
+Starting ROOT version 6.32.06.
+[#1] INFO:Minimization -- p.d.f. provides expected number of events, including extended term in likelihood.
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(total_pdf) fixing normalization set for coefficient determination to observables in data
+[#1] INFO:Fitting -- using CPU computation library compiled with -mavx512
+[#1] INFO:Fitting -- RooAddition::defaultErrorLevel(nll_total_pdf_roo_data_nsigma_1) Summation contains a RooNLLVar, using its error level
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: activating const optimization
+Minuit2Minimizer: Minimize with max-calls 2500 convergence for edm < 1 strategy 1
+Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = -359028.200671331375
+Edm   = 9.66351150682289242e-05
+Nfcn  = 286
+bkg_counts	  = 104.633	 +/-  28.5861	(limited)
+mu_nsigmaTPC	  = 0.111164	 +/-  0.00387822	(limited)
+sgn_counts	  = 42274.3	 +/-  207.352	(limited)
+sigma_nsigmaTPC	  = 0.78325	 +/-  0.00297023	(limited)
+tau_nsigmaTPC	  = 0.348332	 +/-  0.086719	(limited)
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: deactivating const optimization
+[#1] INFO:Eval -- RooRealVar::setRange(nsigmaTPC) new range named 'sig_region' created with bounds [-2,2]
+[#1] INFO:Minimization -- p.d.f. provides expected number of events, including extended term in likelihood.
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(total_pdf) fixing normalization set for coefficient determination to observables in data
+[#1] INFO:Fitting -- RooAddition::defaultErrorLevel(nll_total_pdf_roo_data_nsigma_2) Summation contains a RooNLLVar, using its error level
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: activating const optimization
+Minuit2Minimizer: Minimize with max-calls 2500 convergence for edm < 1 strategy 1
+Minuit2Minimizer : Valid minimum - status = 1
+FVAL  = -463597.213224057748
+Edm   = 1.55400233383411239e-05
+Nfcn  = 150
+bkg_counts	  = 1.1942e-05	 +/-  6.77898	(limited)
+mu_nsigmaTPC	  = -0.10721	 +/-  0.000211375	(limited)
+sgn_counts	  = 52911.8	 +/-  15.1583	(limited)
+sigma_nsigmaTPC	  = 0.737832	 +/-  0.000149466	(limited)
+tau_nsigmaTPC	  = -0.192837	 +/-  4.07582	(limited)
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: deactivating const optimization
+[#1] INFO:Minimization -- p.d.f. provides expected number of events, including extended term in likelihood.
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(total_pdf) fixing normalization set for coefficient determination to observables in data
+[#1] INFO:Fitting -- RooAddition::defaultErrorLevel(nll_total_pdf_roo_data_nsigma_3) Summation contains a RooNLLVar, using its error level
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: activating const optimization
+Minuit2Minimizer: Minimize with max-calls 2500 convergence for edm < 1 strategy 1
+Minuit2Minimizer : Valid minimum - status = 1
+FVAL  = -191731.71473466474
+Edm   = 4.31824029176256137e-07
+Nfcn  = 175
+bkg_counts	  = 2.16035e-07	 +/-  1.03775	(limited)
+mu_nsigmaTPC	  = -0.173707	 +/-  0.000212815	(limited)
+sgn_counts	  = 24201	 +/-  6.59483	(limited)
+sigma_nsigmaTPC	  = 0.78096	 +/-  0.000150499	(limited)
+tau_nsigmaTPC	  = 0.85538	 +/-  4.22391	(limited)
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: deactivating const optimization
+[#1] INFO:Minimization -- p.d.f. provides expected number of events, including extended term in likelihood.
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(total_pdf) fixing normalization set for coefficient determination to observables in data
+[#1] INFO:Fitting -- RooAddition::defaultErrorLevel(nll_total_pdf_roo_data_nsigma_4) Summation contains a RooNLLVar, using its error level
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: activating const optimization
+Minuit2Minimizer: Minimize with max-calls 2500 convergence for edm < 1 strategy 1
+Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = -91429.4682379782898
+Edm   = 9.67933754198476509e-06
+Nfcn  = 89
+bkg_counts	  = 3.84298e-06	 +/-  0.526174	(limited)
+mu_nsigmaTPC	  = -0.238231	 +/-  0.00694347	(limited)
+sgn_counts	  = 12575.2	 +/-  112.139	(limited)
+sigma_nsigmaTPC	  = 0.77864	 +/-  0.00491027	(limited)
+tau_nsigmaTPC	  = -2.82385	 +/-  4.20076	(limited)
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: deactivating const optimization
+[#1] INFO:Minimization -- p.d.f. provides expected number of events, including extended term in likelihood.
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(total_pdf) fixing normalization set for coefficient determination to observables in data
+[#1] INFO:Fitting -- RooAddition::defaultErrorLevel(nll_total_pdf_roo_data_nsigma_5) Summation contains a RooNLLVar, using its error level
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: activating const optimization
+Minuit2Minimizer: Minimize with max-calls 2500 convergence for edm < 1 strategy 1
+Minuit2Minimizer : Valid minimum - status = 1
+FVAL  = -42522.3524602126563
+Edm   = 1.63594501004048763e-06
+Nfcn  = 188
+bkg_counts	  = 2.05432e-05	 +/-  26.2037	(limited)
+mu_nsigmaTPC	  = -0.31266	 +/-  0.000731508	(limited)
+sgn_counts	  = 6428.99	 +/-  6.12657	(limited)
+sigma_nsigmaTPC	  = 0.767603	 +/-  0.000517345	(limited)
+tau_nsigmaTPC	  = 0.421515	 +/-  5.91858	(limited)
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: deactivating const optimization
+[#1] INFO:Minimization -- p.d.f. provides expected number of events, including extended term in likelihood.
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(total_pdf) fixing normalization set for coefficient determination to observables in data
+[#1] INFO:Fitting -- RooAddition::defaultErrorLevel(nll_total_pdf_roo_data_nsigma_6) Summation contains a RooNLLVar, using its error level
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: activating const optimization
+Minuit2Minimizer: Minimize with max-calls 2500 convergence for edm < 1 strategy 1
+Minuit2Minimizer : Valid minimum - status = 1
+FVAL  = -18256.8917521083604
+Edm   = 7.56835323830255403e-09
+Nfcn  = 150
+bkg_counts	  = 1.16398e-06	 +/-  376.944	(limited)
+mu_nsigmaTPC	  = -0.384495	 +/-  0.000126016	(limited)
+sgn_counts	  = 3110.02	 +/-  0.501669	(limited)
+sigma_nsigmaTPC	  = 0.781197	 +/-  8.91251e-05	(limited)
+tau_nsigmaTPC	  = 0.301925	 +/-  5.29928	(limited)
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: deactivating const optimization
+[#1] INFO:Minimization -- p.d.f. provides expected number of events, including extended term in likelihood.
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(total_pdf) fixing normalization set for coefficient determination to observables in data
+[#1] INFO:Fitting -- RooAddition::defaultErrorLevel(nll_total_pdf_roo_data_nsigma_7) Summation contains a RooNLLVar, using its error level
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: activating const optimization
+Minuit2Minimizer: Minimize with max-calls 2500 convergence for edm < 1 strategy 1
+Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = -8476.4615103923843
+Edm   = 0.000259958254781778161
+Nfcn  = 158
+bkg_counts	  = 3.89267	 +/-  5.67546	(limited)
+mu_nsigmaTPC	  = -0.465175	 +/-  0.019361	(limited)
+sgn_counts	  = 1618.51	 +/-  40.5844	(limited)
+sigma_nsigmaTPC	  = 0.77007	 +/-  0.0149522	(limited)
+tau_nsigmaTPC	  = 0.140525	 +/-  0.417942	(limited)
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: deactivating const optimization
+****************************************
+Minimizer is Minuit2 / Migrad
+Chi2                      =      1453.33
+NDf                       =            4
+Edm                       =  3.89687e-07
+NCalls                    =          160
+p0                        =      2.80839                      	 (fixed)
+p1                        =     0.420416   +/-   0.00105588   	 (limited)
+p2                        =  0.000142574   +/-   3.14451e-06  	 (limited)
+****************************************
+Minimizer is Minuit2 / Migrad
+Chi2                      =      9.79603
+NDf                       =            6
+Edm                       =  8.61184e-07
+NCalls                    =          197
+p0                        =      2.99131                      	 (fixed)
+p1                        =     0.398168   +/-   0.0182447    	 (limited)
+p2                        =  1.71405e-05   +/-   7.8702e-06   	 (limited)
+Pt bin 1
+Pt bin 2
+Pt bin 3
+Pt bin 4
+Pt bin 5
+Pt bin 6
+Pt bin 7
+Starting ROOT version 6.32.06.
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(cbShapeBkg_over_cbShapeBkg_Int[dcaxy]) fixing normalization set for coefficient determination to observables in data
+[#1] INFO:Fitting -- using CPU computation library compiled with -mavx512
+[#1] INFO:Fitting -- RooAddition::defaultErrorLevel(nll_cbShapeBkg_over_cbShapeBkg_Int[dcaxy]_roo_data_bkg_dcaxy_1) Summation contains a RooNLLVar, using its error level
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: activating const optimization
+Minuit2Minimizer: Minimize with max-calls 2000 convergence for edm < 1 strategy 1
+Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = -104.737479800596006
+Edm   = 0.000743053049779031621
+Nfcn  = 219
+alphaBkg	  = 3.79079	 +/-  2.94761	(limited)
+muDCAxy	  = 0.00101426	 +/-  0.00121372	(limited)
+nBkg	  = 4.92236	 +/-  6.3837	(limited)
+sigmaDCAxyBkg	  = 0.00653709	 +/-  0.000854195	(limited)
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: deactivating const optimization
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(cbShapeBkg_over_cbShapeBkg_Int[dcaxy]) fixing normalization set for coefficient determination to observables in data
+[#1] INFO:Fitting -- RooAddition::defaultErrorLevel(nll_cbShapeBkg_over_cbShapeBkg_Int[dcaxy]_roo_data_bkg_dcaxy_2) Summation contains a RooNLLVar, using its error level
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: activating const optimization
+Minuit2Minimizer: Minimize with max-calls 2000 convergence for edm < 1 strategy 1
+Minuit2Minimizer : Invalid minimum - status = 2
+FVAL  = 0
+Edm   = 0
+Nfcn  = 22
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: deactivating const optimization
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(cbShapeBkg_over_cbShapeBkg_Int[dcaxy]) fixing normalization set for coefficient determination to observables in data
+[#1] INFO:Fitting -- RooAddition::defaultErrorLevel(nll_cbShapeBkg_over_cbShapeBkg_Int[dcaxy]_roo_data_bkg_dcaxy_3) Summation contains a RooNLLVar, using its error level
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: activating const optimization
+Minuit2Minimizer: Minimize with max-calls 2000 convergence for edm < 1 strategy 1
+Minuit2Minimizer : Invalid minimum - status = 2
+FVAL  = 0
+Edm   = 0
+Nfcn  = 24
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: deactivating const optimization
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(cbShapeBkg_over_cbShapeBkg_Int[dcaxy]) fixing normalization set for coefficient determination to observables in data
+[#1] INFO:Fitting -- RooAddition::defaultErrorLevel(nll_cbShapeBkg_over_cbShapeBkg_Int[dcaxy]_roo_data_bkg_dcaxy_4) Summation contains a RooNLLVar, using its error level
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: activating const optimization
+Minuit2Minimizer: Minimize with max-calls 2000 convergence for edm < 1 strategy 1
+Minuit2Minimizer : Invalid minimum - status = 2
+FVAL  = 0
+Edm   = 0
+Nfcn  = 24
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: deactivating const optimization
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(cbShapeBkg_over_cbShapeBkg_Int[dcaxy]) fixing normalization set for coefficient determination to observables in data
+[#1] INFO:Fitting -- RooAddition::defaultErrorLevel(nll_cbShapeBkg_over_cbShapeBkg_Int[dcaxy]_roo_data_bkg_dcaxy_5) Summation contains a RooNLLVar, using its error level
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: activating const optimization
+Minuit2Minimizer: Minimize with max-calls 2000 convergence for edm < 1 strategy 1
+Minuit2Minimizer : Invalid minimum - status = 2
+FVAL  = 0
+Edm   = 0
+Nfcn  = 24
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: deactivating const optimization
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(cbShapeBkg_over_cbShapeBkg_Int[dcaxy]) fixing normalization set for coefficient determination to observables in data
+[#1] INFO:Fitting -- RooAddition::defaultErrorLevel(nll_cbShapeBkg_over_cbShapeBkg_Int[dcaxy]_roo_data_bkg_dcaxy_6) Summation contains a RooNLLVar, using its error level
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: activating const optimization
+Minuit2Minimizer: Minimize with max-calls 2000 convergence for edm < 1 strategy 1
+Minuit2Minimizer : Invalid minimum - status = 2
+FVAL  = 0
+Edm   = 0
+Nfcn  = 24
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: deactivating const optimization
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(cbShapeBkg_over_cbShapeBkg_Int[dcaxy]) fixing normalization set for coefficient determination to observables in data
+[#1] INFO:Fitting -- RooAddition::defaultErrorLevel(nll_cbShapeBkg_over_cbShapeBkg_Int[dcaxy]_roo_data_bkg_dcaxy_7) Summation contains a RooNLLVar, using its error level
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: activating const optimization
+Minuit2Minimizer: Minimize with max-calls 2000 convergence for edm < 1 strategy 1
+Minuit2Minimizer : Invalid minimum - status = 2
+FVAL  = 0
+Edm   = 0
+Nfcn  = 24
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: deactivating const optimization
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(cbShape_over_cbShape_Int[dcaxy]) fixing normalization set for coefficient determination to observables in data
+[#1] INFO:Fitting -- RooAddition::defaultErrorLevel(nll_cbShape_over_cbShape_Int[dcaxy]_roo_mc_dcaxy_1) Summation contains a RooNLLVar, using its error level
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: activating const optimization
+Minuit2Minimizer: Minimize with max-calls 2000 convergence for edm < 1 strategy 1
+Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = -147713.207232600107
+Edm   = 0.000108301108796099481
+Nfcn  = 300
+alpha	  = 1.6043	 +/-  0.0357753	(limited)
+muDCAxy	  = -4.26328e-05	 +/-  2.48699e-05	(limited)
+n	  = 8.46517	 +/-  0.898538	(limited)
+sigmaDCAxy	  = 0.00438838	 +/-  3.06459e-05	(limited)
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: deactivating const optimization
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(cbShapeH3L_over_cbShapeH3L_Int[dcaxy]) fixing normalization set for coefficient determination to observables in data
+[#1] INFO:Fitting -- RooAddition::defaultErrorLevel(nll_cbShapeH3L_over_cbShapeH3L_Int[dcaxy]_roo_mc_secondaries_dcaxy_1) Summation contains a RooNLLVar, using its error level
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: activating const optimization
+Minuit2Minimizer: Minimize with max-calls 2000 convergence for edm < 1 strategy 1
+Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = -11638.8900089037579
+Edm   = 0.000197775087354658334
+Nfcn  = 262
+alphaH3L	  = 0.608197	 +/-  0.0672322	(limited)
+muDCAxy	  = -5.80843e-05	 +/-  0.000373507	(limited)
+nH3L	  = 1.67503	 +/-  0.586033	(limited)
+sigmaDCAxyH3L	  = 0.00999998	 +/-  0.000797658	(limited)
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: deactivating const optimization
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(cbShapeLambdab_over_cbShapeLambdab_Int[dcaxy]) fixing normalization set for coefficient determination to observables in data
+[#1] INFO:Fitting -- RooAddition::defaultErrorLevel(nll_cbShapeLambdab_over_cbShapeLambdab_Int[dcaxy]_roo_mc_lambdab_dcaxy_1) Summation contains a RooNLLVar, using its error level
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: activating const optimization
+Minuit2Minimizer: Minimize with max-calls 2000 convergence for edm < 1 strategy 1
+Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = -175809.579667499667
+Edm   = 2.57491396409182645e-05
+Nfcn  = 172
+alphaLambdab	  = 1.60949	 +/-  0.0245374	(limited)
+muDCAxyLambdab	  = -2.97921e-05	 +/-  2.71034e-05	(limited)
+nLambdab	  = 1.10722	 +/-  0.044036	(limited)
+sigmaDCAxyLambdab	  = 0.00474097	 +/-  4.08107e-05	(limited)
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: deactivating const optimization
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(cbShape_over_cbShape_Int[dcaxy]) fixing normalization set for coefficient determination to observables in data
+[#1] INFO:Fitting -- RooAddition::defaultErrorLevel(nll_cbShape_over_cbShape_Int[dcaxy]_roo_mc_dcaxy_2) Summation contains a RooNLLVar, using its error level
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: activating const optimization
+Minuit2Minimizer: Minimize with max-calls 2000 convergence for edm < 1 strategy 1
+Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = -284353.50389701064
+Edm   = 2.73417592443718878e-06
+Nfcn  = 163
+alpha	  = 1.83821	 +/-  0.0217396	(limited)
+muDCAxy	  = -2.3205e-05	 +/-  1.23226e-05	(limited)
+n	  = 5.85273	 +/-  0.287563	(limited)
+sigmaDCAxy	  = 0.00296889	 +/-  1.20405e-05	(limited)
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: deactivating const optimization
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(cbShapeH3L_over_cbShapeH3L_Int[dcaxy]) fixing normalization set for coefficient determination to observables in data
+[#1] INFO:Fitting -- RooAddition::defaultErrorLevel(nll_cbShapeH3L_over_cbShapeH3L_Int[dcaxy]_roo_mc_secondaries_dcaxy_2) Summation contains a RooNLLVar, using its error level
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: activating const optimization
+Minuit2Minimizer: Minimize with max-calls 2000 convergence for edm < 1 strategy 1
+Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = -17952.6455753633272
+Edm   = 0.00027497179703274931
+Nfcn  = 180
+alphaH3L	  = 0.729216	 +/-  0.0764704	(limited)
+muDCAxy	  = -0.000264714	 +/-  0.000195532	(limited)
+nH3L	  = 1.4133	 +/-  0.223231	(limited)
+sigmaDCAxyH3L	  = 0.00706474	 +/-  0.000581995	(limited)
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: deactivating const optimization
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(cbShapeLambdab_over_cbShapeLambdab_Int[dcaxy]) fixing normalization set for coefficient determination to observables in data
+[#1] INFO:Fitting -- RooAddition::defaultErrorLevel(nll_cbShapeLambdab_over_cbShapeLambdab_Int[dcaxy]_roo_mc_lambdab_dcaxy_2) Summation contains a RooNLLVar, using its error level
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: activating const optimization
+Minuit2Minimizer: Minimize with max-calls 2000 convergence for edm < 1 strategy 1
+Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = -323221.289556671109
+Edm   = 2.709154488275459e-05
+Nfcn  = 119
+alphaLambdab	  = 1.77445	 +/-  0.0125292	(limited)
+muDCAxyLambdab	  = -3.02891e-05	 +/-  1.31829e-05	(limited)
+nLambdab	  = 1.0339	 +/-  0.0193202	(limited)
+sigmaDCAxyLambdab	  = 0.00313669	 +/-  1.45118e-05	(limited)
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: deactivating const optimization
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(cbShape_over_cbShape_Int[dcaxy]) fixing normalization set for coefficient determination to observables in data
+[#1] INFO:Fitting -- RooAddition::defaultErrorLevel(nll_cbShape_over_cbShape_Int[dcaxy]_roo_mc_dcaxy_3) Summation contains a RooNLLVar, using its error level
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: activating const optimization
+Minuit2Minimizer: Minimize with max-calls 2000 convergence for edm < 1 strategy 1
+Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = -298266.075259186851
+Edm   = 1.54687276657116844e-05
+Nfcn  = 135
+alpha	  = 2.13037	 +/-  0.0326531	(limited)
+muDCAxy	  = -1.70686e-05	 +/-  9.34086e-06	(limited)
+n	  = 3.5631	 +/-  0.169824	(limited)
+sigmaDCAxy	  = 0.00226467	 +/-  9.69573e-06	(limited)
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: deactivating const optimization
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(cbShapeH3L_over_cbShapeH3L_Int[dcaxy]) fixing normalization set for coefficient determination to observables in data
+[#1] INFO:Fitting -- RooAddition::defaultErrorLevel(nll_cbShapeH3L_over_cbShapeH3L_Int[dcaxy]_roo_mc_secondaries_dcaxy_3) Summation contains a RooNLLVar, using its error level
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: activating const optimization
+Minuit2Minimizer: Minimize with max-calls 2000 convergence for edm < 1 strategy 1
+Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = -15906.3719636020887
+Edm   = 0.000262919299803139801
+Nfcn  = 263
+alphaH3L	  = 0.50004	 +/-  0.229264	(limited)
+muDCAxy	  = -0.000257209	 +/-  0.000151683	(limited)
+nH3L	  = 1.32097	 +/-  0.0972994	(limited)
+sigmaDCAxyH3L	  = 0.00300616	 +/-  0.000277009	(limited)
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: deactivating const optimization
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(cbShapeLambdab_over_cbShapeLambdab_Int[dcaxy]) fixing normalization set for coefficient determination to observables in data
+[#1] INFO:Fitting -- RooAddition::defaultErrorLevel(nll_cbShapeLambdab_over_cbShapeLambdab_Int[dcaxy]_roo_mc_lambdab_dcaxy_3) Summation contains a RooNLLVar, using its error level
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: activating const optimization
+Minuit2Minimizer: Minimize with max-calls 2000 convergence for edm < 1 strategy 1
+Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = -331068.158148350834
+Edm   = 8.10030269839800598e-06
+Nfcn  = 130
+alphaLambdab	  = 1.94488	 +/-  0.0102832	(limited)
+muDCAxyLambdab	  = -1.46167e-05	 +/-  9.72758e-06	(limited)
+nLambdab	  = 0.910878	 +/-  0.014199	(limited)
+sigmaDCAxyLambdab	  = 0.00238879	 +/-  8.85004e-06	(limited)
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: deactivating const optimization
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(cbShape_over_cbShape_Int[dcaxy]) fixing normalization set for coefficient determination to observables in data
+[#1] INFO:Fitting -- RooAddition::defaultErrorLevel(nll_cbShape_over_cbShape_Int[dcaxy]_roo_mc_dcaxy_4) Summation contains a RooNLLVar, using its error level
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: activating const optimization
+Minuit2Minimizer: Minimize with max-calls 2000 convergence for edm < 1 strategy 1
+Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = -330017.170983592805
+Edm   = 1.44592836859353537e-05
+Nfcn  = 121
+alpha	  = 2.12127	 +/-  0.0216411	(limited)
+muDCAxy	  = -2.65717e-05	 +/-  7.38145e-06	(limited)
+n	  = 3.2498	 +/-  0.107609	(limited)
+sigmaDCAxy	  = 0.00184787	 +/-  6.58623e-06	(limited)
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: deactivating const optimization
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(cbShapeH3L_over_cbShapeH3L_Int[dcaxy]) fixing normalization set for coefficient determination to observables in data
+[#1] INFO:Fitting -- RooAddition::defaultErrorLevel(nll_cbShapeH3L_over_cbShapeH3L_Int[dcaxy]_roo_mc_secondaries_dcaxy_4) Summation contains a RooNLLVar, using its error level
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: activating const optimization
+Minuit2Minimizer: Minimize with max-calls 2000 convergence for edm < 1 strategy 1
+Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = -16008.2806180050884
+Edm   = 4.96939048215277481e-05
+Nfcn  = 189
+alphaH3L	  = 0.746759	 +/-  0.0556603	(limited)
+muDCAxy	  = -9.0713e-05	 +/-  0.000128703	(limited)
+nH3L	  = 1.36319	 +/-  0.117718	(limited)
+sigmaDCAxyH3L	  = 0.00416036	 +/-  0.000291297	(limited)
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: deactivating const optimization
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(cbShapeLambdab_over_cbShapeLambdab_Int[dcaxy]) fixing normalization set for coefficient determination to observables in data
+[#1] INFO:Fitting -- RooAddition::defaultErrorLevel(nll_cbShapeLambdab_over_cbShapeLambdab_Int[dcaxy]_roo_mc_lambdab_dcaxy_4) Summation contains a RooNLLVar, using its error level
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: activating const optimization
+Minuit2Minimizer: Minimize with max-calls 2000 convergence for edm < 1 strategy 1
+Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = -362465.864551241975
+Edm   = 6.23530364885936399e-06
+Nfcn  = 98
+alphaLambdab	  = 1.97083	 +/-  0.00956699	(limited)
+muDCAxyLambdab	  = -2.4868e-05	 +/-  7.64044e-06	(limited)
+nLambdab	  = 0.96129	 +/-  0.0129788	(limited)
+sigmaDCAxyLambdab	  = 0.0019431	 +/-  6.74975e-06	(limited)
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: deactivating const optimization
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(cbShape_over_cbShape_Int[dcaxy]) fixing normalization set for coefficient determination to observables in data
+[#1] INFO:Fitting -- RooAddition::defaultErrorLevel(nll_cbShape_over_cbShape_Int[dcaxy]_roo_mc_dcaxy_5) Summation contains a RooNLLVar, using its error level
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: activating const optimization
+Minuit2Minimizer: Minimize with max-calls 2000 convergence for edm < 1 strategy 1
+Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = -352340.085986386344
+Edm   = 1.00851770334243216e-05
+Nfcn  = 121
+alpha	  = 2.21008	 +/-  0.0183511	(limited)
+muDCAxy	  = -6.89174e-06	 +/-  6.08632e-06	(limited)
+n	  = 2.75173	 +/-  0.0763352	(limited)
+sigmaDCAxy	  = 0.00156203	 +/-  5.01287e-06	(limited)
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: deactivating const optimization
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(cbShapeH3L_over_cbShapeH3L_Int[dcaxy]) fixing normalization set for coefficient determination to observables in data
+[#1] INFO:Fitting -- RooAddition::defaultErrorLevel(nll_cbShapeH3L_over_cbShapeH3L_Int[dcaxy]_roo_mc_secondaries_dcaxy_5) Summation contains a RooNLLVar, using its error level
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: activating const optimization
+Minuit2Minimizer: Minimize with max-calls 2000 convergence for edm < 1 strategy 1
+Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = -15499.5767726978047
+Edm   = 4.91141229826136094e-06
+Nfcn  = 128
+alphaH3L	  = 0.869328	 +/-  0.0616874	(limited)
+muDCAxy	  = -0.000256502	 +/-  0.000114861	(limited)
+nH3L	  = 1.19735	 +/-  0.0959423	(limited)
+sigmaDCAxyH3L	  = 0.00385576	 +/-  0.000260508	(limited)
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: deactivating const optimization
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(cbShapeLambdab_over_cbShapeLambdab_Int[dcaxy]) fixing normalization set for coefficient determination to observables in data
+[#1] INFO:Fitting -- RooAddition::defaultErrorLevel(nll_cbShapeLambdab_over_cbShapeLambdab_Int[dcaxy]_roo_mc_lambdab_dcaxy_5) Summation contains a RooNLLVar, using its error level
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: activating const optimization
+Minuit2Minimizer: Minimize with max-calls 2000 convergence for edm < 1 strategy 1
+Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = -383421.613145114854
+Edm   = 3.73844474316817723e-05
+Nfcn  = 100
+alphaLambdab	  = 1.97594	 +/-  0.0110632	(limited)
+muDCAxyLambdab	  = -9.85537e-06	 +/-  6.41915e-06	(limited)
+nLambdab	  = 1.00915	 +/-  0.0139102	(limited)
+sigmaDCAxyLambdab	  = 0.00161361	 +/-  6.36854e-06	(limited)
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: deactivating const optimization
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(cbShape_over_cbShape_Int[dcaxy]) fixing normalization set for coefficient determination to observables in data
+[#1] INFO:Fitting -- RooAddition::defaultErrorLevel(nll_cbShape_over_cbShape_Int[dcaxy]_roo_mc_dcaxy_6) Summation contains a RooNLLVar, using its error level
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: activating const optimization
+Minuit2Minimizer: Minimize with max-calls 2000 convergence for edm < 1 strategy 1
+Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = -374994.787501071696
+Edm   = 4.39815087971107896e-06
+Nfcn  = 158
+alpha	  = 2.08368	 +/-  0.0203232	(limited)
+muDCAxy	  = -1.17647e-05	 +/-  5.21692e-06	(limited)
+n	  = 2.88484	 +/-  0.0770628	(limited)
+sigmaDCAxy	  = 0.00133538	 +/-  4.97361e-06	(limited)
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: deactivating const optimization
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(cbShapeH3L_over_cbShapeH3L_Int[dcaxy]) fixing normalization set for coefficient determination to observables in data
+[#1] INFO:Fitting -- RooAddition::defaultErrorLevel(nll_cbShapeH3L_over_cbShapeH3L_Int[dcaxy]_roo_mc_secondaries_dcaxy_6) Summation contains a RooNLLVar, using its error level
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: activating const optimization
+Minuit2Minimizer: Minimize with max-calls 2000 convergence for edm < 1 strategy 1
+Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = -14840.7472291300892
+Edm   = 1.74534163107741031e-05
+Nfcn  = 104
+alphaH3L	  = 0.865876	 +/-  0.0501596	(limited)
+muDCAxy	  = 2.45015e-05	 +/-  9.58722e-05	(limited)
+nH3L	  = 1.13845	 +/-  0.0726638	(limited)
+sigmaDCAxyH3L	  = 0.00305458	 +/-  0.000180283	(limited)
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: deactivating const optimization
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(cbShapeLambdab_over_cbShapeLambdab_Int[dcaxy]) fixing normalization set for coefficient determination to observables in data
+[#1] INFO:Fitting -- RooAddition::defaultErrorLevel(nll_cbShapeLambdab_over_cbShapeLambdab_Int[dcaxy]_roo_mc_lambdab_dcaxy_6) Summation contains a RooNLLVar, using its error level
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: activating const optimization
+Minuit2Minimizer: Minimize with max-calls 2000 convergence for edm < 1 strategy 1
+Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = -405249.860526317556
+Edm   = 0.000205640147383545082
+Nfcn  = 90
+alphaLambdab	  = 1.98438	 +/-  0.00964835	(limited)
+muDCAxyLambdab	  = -9.54029e-06	 +/-  5.37883e-06	(limited)
+nLambdab	  = 1.03256	 +/-  0.0121079	(limited)
+sigmaDCAxyLambdab	  = 0.00138521	 +/-  4.98182e-06	(limited)
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: deactivating const optimization
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(cbShape_over_cbShape_Int[dcaxy]) fixing normalization set for coefficient determination to observables in data
+[#1] INFO:Fitting -- RooAddition::defaultErrorLevel(nll_cbShape_over_cbShape_Int[dcaxy]_roo_mc_dcaxy_7) Summation contains a RooNLLVar, using its error level
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: activating const optimization
+Minuit2Minimizer: Minimize with max-calls 2000 convergence for edm < 1 strategy 1
+Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = -394039.685930127569
+Edm   = 0.0003651978963584684
+Nfcn  = 107
+alpha	  = 2.10015	 +/-  0.0261689	(limited)
+muDCAxy	  = -8.07309e-07	 +/-  4.51079e-06	(limited)
+n	  = 2.7446	 +/-  0.0827427	(limited)
+sigmaDCAxy	  = 0.0011616	 +/-  5.07079e-06	(limited)
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: deactivating const optimization
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(cbShapeH3L_over_cbShapeH3L_Int[dcaxy]) fixing normalization set for coefficient determination to observables in data
+[#1] INFO:Fitting -- RooAddition::defaultErrorLevel(nll_cbShapeH3L_over_cbShapeH3L_Int[dcaxy]_roo_mc_secondaries_dcaxy_7) Summation contains a RooNLLVar, using its error level
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: activating const optimization
+Minuit2Minimizer: Minimize with max-calls 2000 convergence for edm < 1 strategy 1
+Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = -14752.3011472029539
+Edm   = 0.000220416356907025525
+Nfcn  = 122
+alphaH3L	  = 0.991924	 +/-  0.0464731	(limited)
+muDCAxy	  = -0.000123857	 +/-  8.46551e-05	(limited)
+nH3L	  = 1.11752	 +/-  0.0669249	(limited)
+sigmaDCAxyH3L	  = 0.00295258	 +/-  0.000136061	(limited)
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: deactivating const optimization
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(cbShapeLambdab_over_cbShapeLambdab_Int[dcaxy]) fixing normalization set for coefficient determination to observables in data
+[#1] INFO:Fitting -- RooAddition::defaultErrorLevel(nll_cbShapeLambdab_over_cbShapeLambdab_Int[dcaxy]_roo_mc_lambdab_dcaxy_7) Summation contains a RooNLLVar, using its error level
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: activating const optimization
+Minuit2Minimizer: Minimize with max-calls 2000 convergence for edm < 1 strategy 1
+Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = -423664.992139454407
+Edm   = 6.7673963700845064e-05
+Nfcn  = 97
+alphaLambdab	  = 1.9965	 +/-  0.0105333	(limited)
+muDCAxyLambdab	  = -2.37475e-06	 +/-  4.6695e-06	(limited)
+nLambdab	  = 1.07015	 +/-  0.0127115	(limited)
+sigmaDCAxyLambdab	  = 0.00120329	 +/-  4.63006e-06	(limited)
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: deactivating const optimization
+[#1] INFO:Caching -- Changing internal binning of variable 'dcaxy' in FFT 'convP_1' from 100 to 930 to improve the precision of the numerical FFT. This can be done manually by setting an additional binning named 'cache'.
+[#1] INFO:Eval -- RooRealVar::setRange(dcaxy) new range named 'refrange_fft_convS_1' created with bounds [-0.04,0.04]
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convS_1) creating new cache 0x41e928a0 with pdf cbShapeH3L_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0
+[#1] INFO:Eval -- RooRealVar::setRange(dcaxy) new range named 'refrange_fft_convLambdab_1' created with bounds [-0.04,0.04]
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convLambdab_1) creating new cache 0x4201fe10 with pdf cbShapeLambdab_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0
+[#1] INFO:Eval -- RooRealVar::setRange(dcaxy) new range named 'refrange_fft_convP_1' created with bounds [-0.04,0.04]
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convP_1) creating new cache 0x4201fd20 with pdf cbShape_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(full_pdf_1) fixing normalization set for coefficient determination to observables in data
+[#1] INFO:Fitting -- RooAddition::defaultErrorLevel(nll_full_pdf_1_roo_data_dcaxy_1) Summation contains a RooNLLVar, using its error level
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: activating const optimization
+Minuit2Minimizer: Minimize with max-calls 8500 convergence for edm < 1 strategy 1
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convP_1) creating new cache 0x41c2adc0 with pdf cbShape_CONV_gaus_reso_CACHE_Obs[dcaxy] for nset () with code 1
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convLambdab_1) creating new cache 0x41e85840 with pdf cbShapeLambdab_CONV_gaus_reso_CACHE_Obs[dcaxy] for nset () with code 1
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convS_1) creating new cache 0x41f8d690 with pdf cbShapeH3L_CONV_gaus_reso_CACHE_Obs[dcaxy] for nset () with code 1
+Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = -149128.720906181174
+Edm   = 0.000669493892331790011
+Nfcn  = 1463
+alpha	  = 1.55754	 +/-  0.00390067	(limited)
+alphaBkg	  = 1.2014	 +/-  3.73901	(limited)
+alphaH3L	  = 0.678313	 +/-  0.0790185	(limited)
+alphaLambdab	  = 1.6333	 +/-  0.0417099	(limited)
+frac_h3l	  = 0.00367624	 (const)
+frac_lambdab	  = 0.0649307	 +/-  0.0108203	(limited)
+gaus_sigma	  = 0.00289962	 +/-  7.8719e-05	(limited)
+muDCAxy	  = 0.000432065	 +/-  2.69827e-05	(limited)
+muDCAxyLambdab	  = -0.00523247	 +/-  0.000875045	(limited)
+n	  = 7.41685	 +/-  0.161	(limited)
+nBkg	  = 9.95603	 +/-  6.8302	(limited)
+nH3L	  = 2.29082	 +/-  1.19706	(limited)
+nLambdab	  = 1.15012	 +/-  0.0691689	(limited)
+sigmaDCAxy	  = 0.00442719	 +/-  4.88803e-05	(limited)
+sigmaDCAxyBkg	  = 0.00739118	 +/-  0.000981726	(limited)
+sigmaDCAxyH3L	  = 0.00919989	 +/-  0.00159271	(limited)
+sigmaDCAxyLambdab	  = 0.00478081	 +/-  6.80565e-05	(limited)
+Number of free parameters from FitConfig = 17
+Number of free parameters from Minimizer = 16
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: deactivating const optimization
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convS_1) creating new cache 0x41c2adc0 with pdf cbShapeH3L_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convLambdab_1) creating new cache 0x4201fe10 with pdf cbShapeLambdab_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convP_1) creating new cache 0x41f8d690 with pdf cbShape_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(full_pdf_1) directly selected PDF components: (convP_1)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(full_pdf_1) indirectly selected PDF components: (signal_pdf_1)
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convS_1) creating new cache 0x42018b40 with pdf cbShapeH3L_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0 from preexisting content.
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convLambdab_1) creating new cache 0x420463f0 with pdf cbShapeLambdab_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0 from preexisting content.
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convP_1) creating new cache 0x42070eb0 with pdf cbShape_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0 from preexisting content.
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(full_pdf_1) directly selected PDF components: (convS_1)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(full_pdf_1) indirectly selected PDF components: (signal_pdf_1)
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convS_1) creating new cache 0x42070eb0 with pdf cbShapeH3L_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0 from preexisting content.
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convLambdab_1) creating new cache 0x42015ec0 with pdf cbShapeLambdab_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0 from preexisting content.
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convP_1) creating new cache 0x42018b40 with pdf cbShape_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0 from preexisting content.
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(full_pdf_1) directly selected PDF components: (cbShapeBkg)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(full_pdf_1) indirectly selected PDF components: ()
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convS_1) creating new cache 0x42018b40 with pdf cbShapeH3L_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0 from preexisting content.
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convLambdab_1) creating new cache 0x40ede790 with pdf cbShapeLambdab_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0 from preexisting content.
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convP_1) creating new cache 0x42070eb0 with pdf cbShape_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0 from preexisting content.
+[#1] INFO:Eval -- RooRealVar::setRange(dcaxy) new range named 'refrange_fft_convS_2' created with bounds [-0.04,0.04]
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convS_2) creating new cache 0x42c34a50 with pdf cbShapeH3L_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0
+[#1] INFO:Eval -- RooRealVar::setRange(dcaxy) new range named 'refrange_fft_convLambdab_2' created with bounds [-0.04,0.04]
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convLambdab_2) creating new cache 0x42c31260 with pdf cbShapeLambdab_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0
+[#1] INFO:Eval -- RooRealVar::setRange(dcaxy) new range named 'refrange_fft_convP_2' created with bounds [-0.04,0.04]
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convP_2) creating new cache 0x42cdb590 with pdf cbShape_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(full_pdf_2) fixing normalization set for coefficient determination to observables in data
+[#1] INFO:Fitting -- RooAddition::defaultErrorLevel(nll_full_pdf_2_roo_data_dcaxy_2) Summation contains a RooNLLVar, using its error level
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: activating const optimization
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::optimizeConstantTerms: set of constant parameters changed, rerunning const optimizer
+Minuit2Minimizer: Minimize with max-calls 8500 convergence for edm < 1 strategy 1
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convP_2) creating new cache 0x42d128c0 with pdf cbShape_CONV_gaus_reso_CACHE_Obs[dcaxy] for nset () with code 1
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convLambdab_2) creating new cache 0x42d20d40 with pdf cbShapeLambdab_CONV_gaus_reso_CACHE_Obs[dcaxy] for nset () with code 1
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convS_2) creating new cache 0x42d46330 with pdf cbShapeH3L_CONV_gaus_reso_CACHE_Obs[dcaxy] for nset () with code 1
+Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = -206287.604105734441
+Edm   = 0.000415512233375487272
+Nfcn  = 764
+alpha	  = 1.81591	 +/-  0.00219958	(limited)
+alphaBkg	  = 3.79079	 (fixed)
+alphaH3L	  = 0.801382	 +/-  0.100546	(limited)
+alphaLambdab	  = 1.76186	 +/-  0.0170578	(limited)
+frac_h3l	  = 0.00256572	 (const)
+frac_lambdab	  = 0.0611899	 +/-  0.00568274	(limited)
+gaus_sigma	  = 0.0024459	 +/-  3.7354e-05	(limited)
+muDCAxy	  = 0.000374611	 +/-  1.32016e-05	(limited)
+muDCAxyLambdab	  = -0.00425484	 +/-  0.000488364	(limited)
+n	  = 5.55706	 +/-  0.0388539	(limited)
+nBkg	  = 4.92236	 (fixed)
+nH3L	  = 1.62514	 +/-  0.284038	(limited)
+nLambdab	  = 1.05333	 +/-  0.0271213	(limited)
+sigmaDCAxy	  = 0.00298094	 +/-  5.00231e-06	(limited)
+sigmaDCAxyBkg	  = 0.00653709	 (fixed)
+sigmaDCAxyH3L	  = 0.00649769	 +/-  0.000802824	(limited)
+sigmaDCAxyLambdab	  = 0.00315117	 +/-  1.97455e-05	(limited)
+Number of free parameters from FitConfig = 14
+Number of free parameters from Minimizer = 13
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::optimizeConstantTerms: set of constant parameters changed, rerunning const optimizer
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: deactivating const optimization
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convS_2) creating new cache 0x42d128c0 with pdf cbShapeH3L_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convLambdab_2) creating new cache 0x42d20d40 with pdf cbShapeLambdab_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convP_2) creating new cache 0x42d60670 with pdf cbShape_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(full_pdf_2) directly selected PDF components: (convP_2)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(full_pdf_2) indirectly selected PDF components: (signal_pdf_2)
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convS_2) creating new cache 0x42d60670 with pdf cbShapeH3L_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0 from preexisting content.
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convLambdab_2) creating new cache 0x42d46330 with pdf cbShapeLambdab_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0 from preexisting content.
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convP_2) creating new cache 0x42d128c0 with pdf cbShape_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0 from preexisting content.
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(full_pdf_2) directly selected PDF components: (convS_2)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(full_pdf_2) indirectly selected PDF components: (signal_pdf_2)
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convS_2) creating new cache 0x42d128c0 with pdf cbShapeH3L_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0 from preexisting content.
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convLambdab_2) creating new cache 0x42cdb590 with pdf cbShapeLambdab_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0 from preexisting content.
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convP_2) creating new cache 0x42d60670 with pdf cbShape_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0 from preexisting content.
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(full_pdf_2) directly selected PDF components: (cbShapeBkg)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(full_pdf_2) indirectly selected PDF components: ()
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convS_2) creating new cache 0x42d60670 with pdf cbShapeH3L_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0 from preexisting content.
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convLambdab_2) creating new cache 0x42d20d40 with pdf cbShapeLambdab_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0 from preexisting content.
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convP_2) creating new cache 0x42d128c0 with pdf cbShape_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0 from preexisting content.
+[#1] INFO:Eval -- RooRealVar::setRange(dcaxy) new range named 'refrange_fft_convS_3' created with bounds [-0.04,0.04]
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convS_3) creating new cache 0x42d128c0 with pdf cbShapeH3L_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0
+[#1] INFO:Eval -- RooRealVar::setRange(dcaxy) new range named 'refrange_fft_convLambdab_3' created with bounds [-0.04,0.04]
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convLambdab_3) creating new cache 0x42d20d40 with pdf cbShapeLambdab_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0
+[#1] INFO:Eval -- RooRealVar::setRange(dcaxy) new range named 'refrange_fft_convP_3' created with bounds [-0.04,0.04]
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convP_3) creating new cache 0x42d46330 with pdf cbShape_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(full_pdf_3) fixing normalization set for coefficient determination to observables in data
+[#1] INFO:Fitting -- RooAddition::defaultErrorLevel(nll_full_pdf_3_roo_data_dcaxy_3) Summation contains a RooNLLVar, using its error level
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: activating const optimization
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::optimizeConstantTerms: set of constant parameters changed, rerunning const optimizer
+Minuit2Minimizer: Minimize with max-calls 8500 convergence for edm < 1 strategy 1
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convP_3) creating new cache 0x42c31260 with pdf cbShape_CONV_gaus_reso_CACHE_Obs[dcaxy] for nset () with code 1
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convLambdab_3) creating new cache 0x42d60670 with pdf cbShapeLambdab_CONV_gaus_reso_CACHE_Obs[dcaxy] for nset () with code 1
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convS_3) creating new cache 0x42cdb590 with pdf cbShapeH3L_CONV_gaus_reso_CACHE_Obs[dcaxy] for nset () with code 1
+Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = -99307.2835152273474
+Edm   = 9.70828119755594109e-05
+Nfcn  = 1117
+alpha	  = 2.09614	 +/-  0.00741702	(limited)
+alphaBkg	  = 3.79079	 (fixed)
+alphaH3L	  = 0.334896	 +/-  0.221591	(limited)
+alphaLambdab	  = 1.93454	 +/-  0.0142695	(limited)
+frac_h3l	  = 0.00194057	 (const)
+frac_lambdab	  = 0.0489492	 +/-  0.00727744	(limited)
+gaus_sigma	  = 0.00214764	 +/-  3.58167e-05	(limited)
+muDCAxy	  = 0.00033612	 +/-  1.46455e-05	(limited)
+muDCAxyLambdab	  = -0.00383772	 +/-  0.000532277	(limited)
+n	  = 3.38466	 +/-  0.0620163	(limited)
+nBkg	  = 4.92236	 (fixed)
+nH3L	  = 1.22415	 +/-  0.135796	(limited)
+nLambdab	  = 0.89659	 +/-  0.019522	(limited)
+sigmaDCAxy	  = 0.00227447	 +/-  1.31182e-05	(limited)
+sigmaDCAxyBkg	  = 0.00653709	 (fixed)
+sigmaDCAxyH3L	  = 0.00276363	 +/-  0.000319958	(limited)
+sigmaDCAxyLambdab	  = 0.00239764	 +/-  1.23891e-05	(limited)
+Number of free parameters from FitConfig = 14
+Number of free parameters from Minimizer = 13
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::optimizeConstantTerms: set of constant parameters changed, rerunning const optimizer
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: deactivating const optimization
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convS_3) creating new cache 0x42c31260 with pdf cbShapeH3L_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convLambdab_3) creating new cache 0x42d60670 with pdf cbShapeLambdab_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convP_3) creating new cache 0x42c34a50 with pdf cbShape_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(full_pdf_3) directly selected PDF components: (convP_3)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(full_pdf_3) indirectly selected PDF components: (signal_pdf_3)
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convS_3) creating new cache 0x42c34a50 with pdf cbShapeH3L_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0 from preexisting content.
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convLambdab_3) creating new cache 0x42cdb590 with pdf cbShapeLambdab_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0 from preexisting content.
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convP_3) creating new cache 0x42c31260 with pdf cbShape_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0 from preexisting content.
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(full_pdf_3) directly selected PDF components: (convS_3)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(full_pdf_3) indirectly selected PDF components: (signal_pdf_3)
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convS_3) creating new cache 0x42c31260 with pdf cbShapeH3L_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0 from preexisting content.
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convLambdab_3) creating new cache 0x42d46330 with pdf cbShapeLambdab_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0 from preexisting content.
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convP_3) creating new cache 0x42c34a50 with pdf cbShape_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0 from preexisting content.
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(full_pdf_3) directly selected PDF components: (cbShapeBkg)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(full_pdf_3) indirectly selected PDF components: ()
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convS_3) creating new cache 0x42c34a50 with pdf cbShapeH3L_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0 from preexisting content.
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convLambdab_3) creating new cache 0x42d60670 with pdf cbShapeLambdab_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0 from preexisting content.
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convP_3) creating new cache 0x42c31260 with pdf cbShape_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0 from preexisting content.
+[#1] INFO:Eval -- RooRealVar::setRange(dcaxy) new range named 'refrange_fft_convS_4' created with bounds [-0.04,0.04]
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convS_4) creating new cache 0x42c31260 with pdf cbShapeH3L_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0
+[#1] INFO:Eval -- RooRealVar::setRange(dcaxy) new range named 'refrange_fft_convLambdab_4' created with bounds [-0.04,0.04]
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convLambdab_4) creating new cache 0x42d60670 with pdf cbShapeLambdab_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0
+[#1] INFO:Eval -- RooRealVar::setRange(dcaxy) new range named 'refrange_fft_convP_4' created with bounds [-0.04,0.04]
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convP_4) creating new cache 0x42cdb590 with pdf cbShape_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(full_pdf_4) fixing normalization set for coefficient determination to observables in data
+[#1] INFO:Fitting -- RooAddition::defaultErrorLevel(nll_full_pdf_4_roo_data_dcaxy_4) Summation contains a RooNLLVar, using its error level
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: activating const optimization
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::optimizeConstantTerms: set of constant parameters changed, rerunning const optimizer
+Minuit2Minimizer: Minimize with max-calls 8500 convergence for edm < 1 strategy 1
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convP_4) creating new cache 0x42d20d40 with pdf cbShape_CONV_gaus_reso_CACHE_Obs[dcaxy] for nset () with code 1
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convLambdab_4) creating new cache 0x42c34a50 with pdf cbShapeLambdab_CONV_gaus_reso_CACHE_Obs[dcaxy] for nset () with code 1
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convS_4) creating new cache 0x42d46330 with pdf cbShapeH3L_CONV_gaus_reso_CACHE_Obs[dcaxy] for nset () with code 1
+Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = -53348.8804051811821
+Edm   = 0.000141362252642231943
+Nfcn  = 668
+alpha	  = 2.09909	 +/-  0.00969555	(limited)
+alphaBkg	  = 3.79079	 (fixed)
+alphaH3L	  = 0.692601	 +/-  0.0757622	(limited)
+alphaLambdab	  = 1.98045	 +/-  0.0136392	(limited)
+frac_h3l	  = 0.0016475	 (const)
+frac_lambdab	  = 0.0211291	 +/-  0.00598077	(limited)
+gaus_sigma	  = 0.00202562	 +/-  3.74351e-05	(limited)
+muDCAxy	  = 0.00028641	 +/-  1.7133e-05	(limited)
+muDCAxyLambdab	  = -0.00607952	 +/-  0.000751502	(limited)
+n	  = 3.13941	 +/-  0.141394	(limited)
+nBkg	  = 4.92236	 (fixed)
+nH3L	  = 1.24824	 +/-  0.157895	(limited)
+nLambdab	  = 0.948241	 +/-  0.0185151	(limited)
+sigmaDCAxy	  = 0.00185446	 +/-  9.07396e-06	(limited)
+sigmaDCAxyBkg	  = 0.00653709	 (fixed)
+sigmaDCAxyH3L	  = 0.0038719	 +/-  0.000404728	(limited)
+sigmaDCAxyLambdab	  = 0.00193636	 +/-  9.66005e-06	(limited)
+Number of free parameters from FitConfig = 14
+Number of free parameters from Minimizer = 13
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::optimizeConstantTerms: set of constant parameters changed, rerunning const optimizer
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: deactivating const optimization
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convS_4) creating new cache 0x42d20d40 with pdf cbShapeH3L_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convLambdab_4) creating new cache 0x42c34a50 with pdf cbShapeLambdab_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convP_4) creating new cache 0x42d128c0 with pdf cbShape_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(full_pdf_4) directly selected PDF components: (convP_4)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(full_pdf_4) indirectly selected PDF components: (signal_pdf_4)
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convS_4) creating new cache 0x42d128c0 with pdf cbShapeH3L_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0 from preexisting content.
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convLambdab_4) creating new cache 0x42d46330 with pdf cbShapeLambdab_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0 from preexisting content.
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convP_4) creating new cache 0x42d20d40 with pdf cbShape_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0 from preexisting content.
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(full_pdf_4) directly selected PDF components: (convS_4)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(full_pdf_4) indirectly selected PDF components: (signal_pdf_4)
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convS_4) creating new cache 0x42d20d40 with pdf cbShapeH3L_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0 from preexisting content.
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convLambdab_4) creating new cache 0x42cdb590 with pdf cbShapeLambdab_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0 from preexisting content.
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convP_4) creating new cache 0x42d128c0 with pdf cbShape_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0 from preexisting content.
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(full_pdf_4) directly selected PDF components: (cbShapeBkg)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(full_pdf_4) indirectly selected PDF components: ()
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convS_4) creating new cache 0x42d128c0 with pdf cbShapeH3L_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0 from preexisting content.
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convLambdab_4) creating new cache 0x42c34a50 with pdf cbShapeLambdab_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0 from preexisting content.
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convP_4) creating new cache 0x42d20d40 with pdf cbShape_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0 from preexisting content.
+[#1] INFO:Eval -- RooRealVar::setRange(dcaxy) new range named 'refrange_fft_convS_5' created with bounds [-0.04,0.04]
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convS_5) creating new cache 0x42d20d40 with pdf cbShapeH3L_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0
+[#1] INFO:Eval -- RooRealVar::setRange(dcaxy) new range named 'refrange_fft_convLambdab_5' created with bounds [-0.04,0.04]
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convLambdab_5) creating new cache 0x42d46330 with pdf cbShapeLambdab_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0
+[#1] INFO:Eval -- RooRealVar::setRange(dcaxy) new range named 'refrange_fft_convP_5' created with bounds [-0.04,0.04]
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convP_5) creating new cache 0x42d60670 with pdf cbShape_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(full_pdf_5) fixing normalization set for coefficient determination to observables in data
+[#1] INFO:Fitting -- RooAddition::defaultErrorLevel(nll_full_pdf_5_roo_data_dcaxy_5) Summation contains a RooNLLVar, using its error level
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: activating const optimization
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::optimizeConstantTerms: set of constant parameters changed, rerunning const optimizer
+Minuit2Minimizer: Minimize with max-calls 8500 convergence for edm < 1 strategy 1
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convP_5) creating new cache 0x42d128c0 with pdf cbShape_CONV_gaus_reso_CACHE_Obs[dcaxy] for nset () with code 1
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convLambdab_5) creating new cache 0x42cdb590 with pdf cbShapeLambdab_CONV_gaus_reso_CACHE_Obs[dcaxy] for nset () with code 1
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convS_5) creating new cache 0x42c31260 with pdf cbShapeH3L_CONV_gaus_reso_CACHE_Obs[dcaxy] for nset () with code 1
+Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = -27865.7913571196295
+Edm   = 3.14347989818735321e-05
+Nfcn  = 1749
+alpha	  = 2.19137	 +/-  0.0248363	(limited)
+alphaBkg	  = 3.79079	 (fixed)
+alphaH3L	  = 0.834279	 +/-  0.0679314	(limited)
+alphaLambdab	  = 1.96481	 +/-  0.0195389	(limited)
+frac_h3l	  = 0.00145087	 (const)
+frac_lambdab	  = 0.0295869	 +/-  0.0139587	(limited)
+gaus_sigma	  = 0.00186894	 +/-  4.81067e-05	(limited)
+muDCAxy	  = 0.000289235	 +/-  2.41644e-05	(limited)
+muDCAxyLambdab	  = -0.00468952	 +/-  0.00122215	(limited)
+n	  = 2.67382	 +/-  0.106839	(limited)
+nBkg	  = 4.92236	 (fixed)
+nH3L	  = 1.29014	 +/-  0.180246	(limited)
+nLambdab	  = 0.995148	 +/-  0.0277512	(limited)
+sigmaDCAxy	  = 0.00156705	 +/-  9.76689e-06	(limited)
+sigmaDCAxyBkg	  = 0.00653709	 (fixed)
+sigmaDCAxyH3L	  = 0.00411196	 +/-  0.000512358	(limited)
+sigmaDCAxyLambdab	  = 0.00161824	 +/-  6.58847e-06	(limited)
+Number of free parameters from FitConfig = 14
+Number of free parameters from Minimizer = 13
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::optimizeConstantTerms: set of constant parameters changed, rerunning const optimizer
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: deactivating const optimization
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convS_5) creating new cache 0x42d128c0 with pdf cbShapeH3L_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convLambdab_5) creating new cache 0x42cdb590 with pdf cbShapeLambdab_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convP_5) creating new cache 0x42dbe090 with pdf cbShape_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(full_pdf_5) directly selected PDF components: (convP_5)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(full_pdf_5) indirectly selected PDF components: (signal_pdf_5)
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convS_5) creating new cache 0x42dbe090 with pdf cbShapeH3L_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0 from preexisting content.
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convLambdab_5) creating new cache 0x42c31260 with pdf cbShapeLambdab_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0 from preexisting content.
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convP_5) creating new cache 0x42d128c0 with pdf cbShape_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0 from preexisting content.
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(full_pdf_5) directly selected PDF components: (convS_5)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(full_pdf_5) indirectly selected PDF components: (signal_pdf_5)
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convS_5) creating new cache 0x42d128c0 with pdf cbShapeH3L_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0 from preexisting content.
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convLambdab_5) creating new cache 0x42d60670 with pdf cbShapeLambdab_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0 from preexisting content.
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convP_5) creating new cache 0x42dbe090 with pdf cbShape_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0 from preexisting content.
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(full_pdf_5) directly selected PDF components: (cbShapeBkg)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(full_pdf_5) indirectly selected PDF components: ()
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convS_5) creating new cache 0x42dbe090 with pdf cbShapeH3L_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0 from preexisting content.
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convLambdab_5) creating new cache 0x42cdb590 with pdf cbShapeLambdab_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0 from preexisting content.
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convP_5) creating new cache 0x42d128c0 with pdf cbShape_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0 from preexisting content.
+[#1] INFO:Eval -- RooRealVar::setRange(dcaxy) new range named 'refrange_fft_convS_6' created with bounds [-0.04,0.04]
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convS_6) creating new cache 0x42d128c0 with pdf cbShapeH3L_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0
+[#1] INFO:Eval -- RooRealVar::setRange(dcaxy) new range named 'refrange_fft_convLambdab_6' created with bounds [-0.04,0.04]
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convLambdab_6) creating new cache 0x42cdb590 with pdf cbShapeLambdab_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0
+[#1] INFO:Eval -- RooRealVar::setRange(dcaxy) new range named 'refrange_fft_convP_6' created with bounds [-0.04,0.04]
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convP_6) creating new cache 0x42c31260 with pdf cbShape_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(full_pdf_6) fixing normalization set for coefficient determination to observables in data
+[#1] INFO:Fitting -- RooAddition::defaultErrorLevel(nll_full_pdf_6_roo_data_dcaxy_6) Summation contains a RooNLLVar, using its error level
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: activating const optimization
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::optimizeConstantTerms: set of constant parameters changed, rerunning const optimizer
+Minuit2Minimizer: Minimize with max-calls 8500 convergence for edm < 1 strategy 1
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convP_6) creating new cache 0x42d46330 with pdf cbShape_CONV_gaus_reso_CACHE_Obs[dcaxy] for nset () with code 1
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convLambdab_6) creating new cache 0x42dbe090 with pdf cbShapeLambdab_CONV_gaus_reso_CACHE_Obs[dcaxy] for nset () with code 1
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convS_6) creating new cache 0x42d60670 with pdf cbShapeH3L_CONV_gaus_reso_CACHE_Obs[dcaxy] for nset () with code 1
+Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = -13761.9060804901637
+Edm   = 0.000138281347999371073
+Nfcn  = 972
+alpha	  = 2.06289	 +/-  0.0262613	(limited)
+alphaBkg	  = 3.79079	 (fixed)
+alphaH3L	  = 0.840629	 +/-  0.0801015	(limited)
+alphaLambdab	  = 1.99409	 +/-  0.0137725	(limited)
+frac_h3l	  = 0.001211	 (const)
+frac_lambdab	  = 0.027345	 +/-  0.0169129	(limited)
+gaus_sigma	  = 0.00173925	 +/-  6.24377e-05	(limited)
+muDCAxy	  = 0.000275153	 +/-  3.08095e-05	(limited)
+muDCAxyLambdab	  = -0.00399019	 +/-  0.00107142	(limited)
+n	  = 2.80586	 +/-  0.102741	(limited)
+nBkg	  = 4.92236	 (fixed)
+nH3L	  = 1.20893	 +/-  0.103661	(limited)
+nLambdab	  = 1.04476	 +/-  0.0172636	(limited)
+sigmaDCAxy	  = 0.00134036	 +/-  6.84472e-06	(limited)
+sigmaDCAxyBkg	  = 0.00653709	 (fixed)
+sigmaDCAxyH3L	  = 0.0028755	 +/-  0.000254201	(limited)
+sigmaDCAxyLambdab	  = 0.00138025	 +/-  7.27596e-06	(limited)
+Number of free parameters from FitConfig = 14
+Number of free parameters from Minimizer = 13
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::optimizeConstantTerms: set of constant parameters changed, rerunning const optimizer
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: deactivating const optimization
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convS_6) creating new cache 0x42d46330 with pdf cbShapeH3L_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convLambdab_6) creating new cache 0x42dbe090 with pdf cbShapeLambdab_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convP_6) creating new cache 0x42d20d40 with pdf cbShape_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(full_pdf_6) directly selected PDF components: (convP_6)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(full_pdf_6) indirectly selected PDF components: (signal_pdf_6)
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convS_6) creating new cache 0x42d20d40 with pdf cbShapeH3L_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0 from preexisting content.
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convLambdab_6) creating new cache 0x42d60670 with pdf cbShapeLambdab_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0 from preexisting content.
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convP_6) creating new cache 0x42d46330 with pdf cbShape_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0 from preexisting content.
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(full_pdf_6) directly selected PDF components: (convS_6)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(full_pdf_6) indirectly selected PDF components: (signal_pdf_6)
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convS_6) creating new cache 0x42d46330 with pdf cbShapeH3L_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0 from preexisting content.
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convLambdab_6) creating new cache 0x42c31260 with pdf cbShapeLambdab_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0 from preexisting content.
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convP_6) creating new cache 0x42d20d40 with pdf cbShape_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0 from preexisting content.
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(full_pdf_6) directly selected PDF components: (cbShapeBkg)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(full_pdf_6) indirectly selected PDF components: ()
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convS_6) creating new cache 0x42d20d40 with pdf cbShapeH3L_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0 from preexisting content.
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convLambdab_6) creating new cache 0x42dbe090 with pdf cbShapeLambdab_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0 from preexisting content.
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convP_6) creating new cache 0x42d46330 with pdf cbShape_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0 from preexisting content.
+[#1] INFO:Eval -- RooRealVar::setRange(dcaxy) new range named 'refrange_fft_convS_7' created with bounds [-0.04,0.04]
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convS_7) creating new cache 0x42d46330 with pdf cbShapeH3L_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0
+[#1] INFO:Eval -- RooRealVar::setRange(dcaxy) new range named 'refrange_fft_convLambdab_7' created with bounds [-0.04,0.04]
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convLambdab_7) creating new cache 0x42dbe090 with pdf cbShapeLambdab_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0
+[#1] INFO:Eval -- RooRealVar::setRange(dcaxy) new range named 'refrange_fft_convP_7' created with bounds [-0.04,0.04]
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convP_7) creating new cache 0x42d60670 with pdf cbShape_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0
+[#1] INFO:Fitting -- RooAbsPdf::fitTo(full_pdf_7) fixing normalization set for coefficient determination to observables in data
+[#1] INFO:Fitting -- RooAddition::defaultErrorLevel(nll_full_pdf_7_roo_data_dcaxy_7) Summation contains a RooNLLVar, using its error level
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: activating const optimization
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::optimizeConstantTerms: set of constant parameters changed, rerunning const optimizer
+Minuit2Minimizer: Minimize with max-calls 8500 convergence for edm < 1 strategy 1
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convP_7) creating new cache 0x42cdb590 with pdf cbShape_CONV_gaus_reso_CACHE_Obs[dcaxy] for nset () with code 1
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convLambdab_7) creating new cache 0x42d20d40 with pdf cbShapeLambdab_CONV_gaus_reso_CACHE_Obs[dcaxy] for nset () with code 1
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convS_7) creating new cache 0x42c31260 with pdf cbShapeH3L_CONV_gaus_reso_CACHE_Obs[dcaxy] for nset () with code 1
+Minuit2Minimizer : Valid minimum - status = 0
+FVAL  = -7208.71205796120012
+Edm   = 0.000656344036644744642
+Nfcn  = 721
+alpha	  = 2.0732	 +/-  0.0300084	(limited)
+alphaBkg	  = 3.79079	 (fixed)
+alphaH3L	  = 0.946537	 +/-  0.045545	(limited)
+alphaLambdab	  = 2.00695	 +/-  0.0136356	(limited)
+frac_h3l	  = 0.00158055	 (const)
+frac_lambdab	  = 0.0865184	 +/-  0.0385625	(limited)
+gaus_sigma	  = 0.00158545	 +/-  9.10896e-05	(limited)
+muDCAxy	  = 0.000318518	 +/-  4.75836e-05	(limited)
+muDCAxyLambdab	  = -0.00271089	 +/-  0.000676476	(limited)
+n	  = 2.80454	 +/-  0.0939028	(limited)
+nBkg	  = 4.92236	 (fixed)
+nH3L	  = 1.05199	 +/-  0.130263	(limited)
+nLambdab	  = 1.05735	 +/-  0.0142782	(limited)
+sigmaDCAxy	  = 0.0011565	 +/-  7.04016e-06	(limited)
+sigmaDCAxyBkg	  = 0.00653709	 (fixed)
+sigmaDCAxyH3L	  = 0.00308756	 +/-  0.000140528	(limited)
+sigmaDCAxyLambdab	  = 0.00119872	 +/-  5.19868e-06	(limited)
+Number of free parameters from FitConfig = 14
+Number of free parameters from Minimizer = 13
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::optimizeConstantTerms: set of constant parameters changed, rerunning const optimizer
+[#1] INFO:Minimization -- RooAbsMinimizerFcn::setOptimizeConst: deactivating const optimization
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convS_7) creating new cache 0x42cdb590 with pdf cbShapeH3L_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convLambdab_7) creating new cache 0x42d20d40 with pdf cbShapeLambdab_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convP_7) creating new cache 0x42d128c0 with pdf cbShape_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(full_pdf_7) directly selected PDF components: (convP_7)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(full_pdf_7) indirectly selected PDF components: (signal_pdf_7)
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convS_7) creating new cache 0x42d128c0 with pdf cbShapeH3L_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0 from preexisting content.
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convLambdab_7) creating new cache 0x42c31260 with pdf cbShapeLambdab_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0 from preexisting content.
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convP_7) creating new cache 0x42cdb590 with pdf cbShape_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0 from preexisting content.
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(full_pdf_7) directly selected PDF components: (convS_7)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(full_pdf_7) indirectly selected PDF components: (signal_pdf_7)
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convS_7) creating new cache 0x42cdb590 with pdf cbShapeH3L_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0 from preexisting content.
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convLambdab_7) creating new cache 0x42d60670 with pdf cbShapeLambdab_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0 from preexisting content.
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convP_7) creating new cache 0x42d128c0 with pdf cbShape_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0 from preexisting content.
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(full_pdf_7) directly selected PDF components: (cbShapeBkg)
+[#1] INFO:Plotting -- RooAbsPdf::plotOn(full_pdf_7) indirectly selected PDF components: ()
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convS_7) creating new cache 0x42d128c0 with pdf cbShapeH3L_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0 from preexisting content.
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convLambdab_7) creating new cache 0x42d20d40 with pdf cbShapeLambdab_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0 from preexisting content.
+[#1] INFO:Caching -- RooAbsCachedPdf::getCache(convP_7) creating new cache 0x42cdb590 with pdf cbShape_CONV_gaus_reso_CACHE_Obs[dcaxy]_NORM_dcaxy for nset (dcaxy) with code 0 from preexisting content.
